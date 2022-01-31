@@ -50,7 +50,7 @@ const Listing = () => {
                                     Sort By
                                 </span>
 
-                                <select class="form-select" aria-label="Default select example">
+                                <select id="sortBy" className="form-select" role="button" aria-label="sort-by">
                                     <option selected disabled>Default</option>
                                     <option value="x">Lorem, ipsum dolor.</option>
                                     <option value="y">Lorem, ipsum.</option>
