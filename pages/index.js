@@ -8,6 +8,8 @@ export default function Home() {
       <section className="text-dark p-5 px-2 px-lg-0 p-lg-0 pt-lg-5 text-center text-sm-start">
         <div className="container">
           <div className="row">
+            
+            {/* left */}
             <div className='col-lg-6'>
               <h1>Lorem ipsum dolor sit amet, <span className="text-warning"> consectetur adipisicing elit.</span></h1>
               <p className="lead my-4">
@@ -38,7 +40,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-lg-6 pt-4 pt-lg-0">
+            {/* right */}
+            <div className="col-lg-6 pt-4 pt-lg-0 d-none d-md-block">
               <img className="img-fluid w-100" src="/showcase.svg" />
             </div>
           </div>
