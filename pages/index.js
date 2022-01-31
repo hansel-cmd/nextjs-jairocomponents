@@ -5,38 +5,42 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 export default function Home() {
   return (
     <>
-      <section class="text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
-        <div class="container">
-          <div class="d-sm-flex align-items-center justify-content-between">
-            <div>
-              <h1>Lorem ipsum dolor sit amet, <span class="text-warning"> consectetur adipisicing elit.</span></h1>
-              <p class="lead my-4">
+      <section className="text-dark p-5 px-2 px-lg-0 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div className="container">
+          <div className="row">
+            <div className='col-lg-6'>
+              <h1>Lorem ipsum dolor sit amet, <span className="text-warning"> consectetur adipisicing elit.</span></h1>
+              <p className="lead my-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eaque, itaque laborum assumenda autem id harum nobis blanditiis aspernatur modi eligendi dolorum repellat expedita cumque atque illum sit dolore fugit provident aperiam! Quia mollitia nobis libero assumenda excepturi maiores numquam.
               </p>
 
+              {/* Search and Button */}
               <div className="row">
-                <div className="col-9">
-                  <div class="input-group flex-nowrap">
-                    <input type="text" placeholder="Search jobs here..." 
-                      class={`
+                <div className="col-sm-9 mt-2">
+                  <div className="input-group flex-nowrap">
+                    <input type="text" placeholder="Search jobs here..."
+                      className={`
                       form-control
                       ${styles['no-border-right']}
-                    `}/>
-                    <span class={`
+                    `} />
+                    <span className={`
                       input-group-text
                       ${styles['no-background']}
                     `} id="addon-wrapping">
-                      <i class="bi bi-search"></i>
+                      <i className="bi bi-search"></i>
                     </span>
                   </div>
 
                 </div>
-                <div className="col-3 justify-content-center">
-                  <button type="button" class="btn btn-info px-6">Search</button>
+                <div className="col-sm-3 mt-2 d-grid d-block">
+                  <button type="button" className="btn btn-info px-6">Search</button>
                 </div>
               </div>
             </div>
-            <img class="img-fluid w-50 d-none d-sm-block" src="/showcase.svg" />
+
+            <div className="col-lg-6 pt-4 pt-lg-0">
+              <img className="img-fluid w-100" src="/showcase.svg" />
+            </div>
           </div>
         </div>
       </section>
