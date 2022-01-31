@@ -1,39 +1,37 @@
+import styles from '../styles/Navbar.module.css'
+
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">Navbar</a>
+            <div className="container">
+
+                <img src="/logo.png" width="160" height="75" ></img>
+
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+
+
+                <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul className={`navbar-nav mb-2 mb-lg-0 ${styles['navbar-ul']}`}>
+                        <li className={`nav-item ${styles['hover-bottom-border']}`}>
+                            <a className="nav-link active" href="#">Find a job</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
+                        <li className={`nav-item ${styles['hover-bottom-border']}`}>
+                            <a className="nav-link" href="#">Companies</a>
                         </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+                        <li className={`nav-item ${styles['hover-bottom-border']}`}>
+                            <a className="nav-link" href="#">Post a Job</a>
                         </li>
                     </ul>
-                    <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
+
+                    <div className={styles['navbar-link-container']}>
+                    </div>
+                    <form className={`d-grid ${styles['btn-container']}`}>
+                        <button className="btn btn-outline-info px-6" type="submit">Sign In</button>
                     </form>
                 </div>
+
             </div>
         </nav>
     );
