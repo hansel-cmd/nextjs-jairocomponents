@@ -10,6 +10,16 @@
     margin-right: 0.75rem;
 }
 
+.navbar-link-active {
+    border-bottom: 3px solid #0dcaf0 !important;
+    border-bottom-left-radius: 4px 7px !important;
+    border-bottom-right-radius: 4px 7px !important;
+}
+
+.navbar-link-active a {
+    color: #000 !important;
+}
+
 .hover-bottom-border {
     border-bottom: 4px solid transparent;
 }
