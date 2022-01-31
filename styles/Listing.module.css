@@ -1,0 +1,18 @@
+.no-focus:focus {
+    border-color: #ced4da !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.no-focus:active {
+    outline: none !important;
+    border-color: #ced4da !important;
+}
+
+.no-background {
+    background-color: transparent !important;
+}
+  
+.no-border-right {
+    border-right: none !important;
+}
