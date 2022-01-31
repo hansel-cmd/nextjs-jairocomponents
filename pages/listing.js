@@ -31,31 +31,37 @@ const Listing = () => {
                                     `} id="addon-wrapping">
                                         <i className="bi bi-search"></i>
                                     </span>
-
-                                    <button type="button" className="btn btn-info">Filter <i className="bi bi-funnel-fill"></i></button>
                                 </div>
                             </div>
                         </div>
 
 
                         {/* Sort By */}
-                        <div className="pt-4">
+                        <div className="pt-2">
 
-                            <div className="input-group flex-nowrap">
+                            <div className="row">
+                                <div className="col-lg-9 col-xl-10 mt-2">
+                                    <div className="input-group flex-nowrap">
 
-                                <span className={`
+                                        <span className={`
                                     input-group-text
                                     ${styles['no-background']}
                                 `} id="addon-wrapping">
-                                    Sort By
-                                </span>
+                                            Sort By
+                                        </span>
 
-                                <select id="sortBy" className="form-select" role="button" aria-label="sort-by">
-                                    <option selected disabled>Default</option>
-                                    <option value="x">Lorem, ipsum dolor.</option>
-                                    <option value="y">Lorem, ipsum.</option>
-                                    <option value="z">Lorem ipsum dolor sit.</option>
-                                </select>
+                                        <select id="sortBy" className="form-select" role="button" aria-label="sort-by">
+                                            <option defaultValue disabled>Default</option>
+                                            <option value="x">Lorem, ipsum dolor.</option>
+                                            <option value="y">Lorem, ipsum.</option>
+                                            <option value="z">Lorem ipsum dolor sit.</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className="col-lg-3 col-xl-2 d-grid d-block mt-2">
+                                    <button type="button" className="btn btn-info">Filter <i className="bi bi-funnel-fill"></i></button>
+                                </div>
                             </div>
 
                         </div>
