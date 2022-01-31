@@ -26,7 +26,7 @@ const Navbar = () => {
     ]
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-white">
             <div className="container">
 
                 <Link href="/">
