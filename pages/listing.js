@@ -1,4 +1,6 @@
 import styles from '../styles/Listing.module.css'
+import LongCard from '../components/LongCard'
+
 
 const Listing = () => {
     return (
@@ -22,7 +24,7 @@ const Listing = () => {
                                         ${styles['no-border-right']}
                                         ${styles['no-focus']}
                                     `} />
-                                    
+
                                     <span className={`
                                         input-group-text
                                         ${styles['no-background']}
@@ -36,6 +38,40 @@ const Listing = () => {
                         </div>
 
 
+                        {/* Sort By */}
+                        <div className="pt-4">
+
+                            <div className="input-group flex-nowrap">
+
+                                <span className={`
+                                    input-group-text
+                                    ${styles['no-background']}
+                                `} id="addon-wrapping">
+                                    Sort By
+                                </span>
+
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled>Default</option>
+                                    <option value="x">Lorem, ipsum dolor.</option>
+                                    <option value="y">Lorem, ipsum.</option>
+                                    <option value="z">Lorem ipsum dolor sit.</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <div className={
+                            styles['horizontal-separator']
+                        }>
+
+                        </div>
+
+
+                        <div className="pt-4">
+
+                            <LongCard></LongCard>
+                        </div>
 
 
                     </div>

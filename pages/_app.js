@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <script src='/js/bootstrap.js'></script>
+        <script src='/js/bootstrap.bundle.min.js'></script>
       </Head>
       <Layout>
         <Component {...pageProps} />

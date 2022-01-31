@@ -16,3 +16,8 @@
 .no-border-right {
     border-right: none !important;
 }
+
+.horizontal-separator {
+    border-bottom: 1.2px solid #b7c6d3;
+    height: 2.95rem;
+}
