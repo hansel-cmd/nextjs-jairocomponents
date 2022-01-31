@@ -25,10 +25,10 @@ const Navbar = () => {
                         </li>
                     </ul>
 
-                    <div className={styles['navbar-link-container']}>
+                    <div className={styles['navbar-pipe']}>
                     </div>
                     <form className={`d-grid ${styles['btn-container']}`}>
-                        <button className="btn btn-outline-info px-6" type="submit">Sign In</button>
+                        <button className="btn btn-outline-info px-6 rounded-4" type="submit">Sign In</button>
                     </form>
                 </div>
 
