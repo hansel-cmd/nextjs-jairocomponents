@@ -5,12 +5,12 @@ import Link from 'next/link'
 const Navbar = () => {
 
     const router = useRouter();
-    
+
     const links = [
         {
             route: '/', // home
             is_active: router.pathname == '/' ? styles['navbar-link-active'] : '',
-        }, 
+        },
         {
             route: '/listing', // find a job
             is_active: router.pathname == '/listing' ? styles['navbar-link-active'] : '',
@@ -24,19 +24,24 @@ const Navbar = () => {
             is_active: '',
         }
     ]
-    
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom">
             <div className="container">
 
                 <Link href="/">
                     <img src="/logo.png" width="160" height="75" role="button"></img>
                 </Link>
 
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
                 <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul className={`navbar-nav mb-2 mb-lg-0 ${styles['navbar-ul']}`}>
                         <li className={
-                            `nav-item ${styles['hover-bottom-border']} 
+                            `nav-item 
+                            ${styles['hover-bottom-border']} 
                             ${links[1]['is_active']}`
                         }>
                             <Link href="/listing">
@@ -44,15 +49,19 @@ const Navbar = () => {
                             </Link>
                         </li>
 
-                        <li className={`nav-item ${styles['hover-bottom-border']}
+                        <li className={`
+                            nav-item 
+                            ${styles['hover-bottom-border']}
                             ${links[2]['is_active']}
                         `}>
                             <Link href="/">
                                 <a className="nav-link">Companies</a>
                             </Link>
                         </li>
-                        
-                        <li className={`nav-item ${styles['hover-bottom-border']}
+
+                        <li className={`
+                            nav-item 
+                            ${styles['hover-bottom-border']}
                             ${links[3]['is_active']}
                         `}>
                             <Link href="/">
@@ -67,10 +76,6 @@ const Navbar = () => {
                         <button className="btn btn-outline-info px-6 rounded-4" type="submit">Sign In</button>
                     </form>
                 </div>
-
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
             </div>
         </nav>
     );
