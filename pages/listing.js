@@ -76,7 +76,7 @@ const Listing = () => {
 
 
                         <div className="pt-4">
-                            { [1,2,3,4,5].map(() => <LongCard></LongCard>) }
+                            { [1,2,3,4,5].map((i) => <LongCard key={i}></LongCard>) }
                         </div>
 
 

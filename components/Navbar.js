@@ -6,21 +6,25 @@ const Navbar = () => {
 
     const router = useRouter();
 
-    const links = [
+    let links = [
         {
             route: '/', // home
+            name: 'none',
             is_active: router.pathname == '/' ? styles['navbar-link-active'] : '',
         },
         {
             route: '/listing', // find a job
+            name: 'Find a job',
             is_active: router.pathname == '/listing' ? styles['navbar-link-active'] : '',
         },
         {
             route: '/companies', // companies
+            name: 'Companies',
             is_active: '',
         },
         {
             route: '/post a job', // post a job
+            name: 'Post a job',
             is_active: '',
         }
     ]
@@ -39,35 +43,24 @@ const Navbar = () => {
 
                 <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul className={`navbar-nav mb-2 mb-lg-0 ${styles['navbar-ul']}`}>
-                        <li className={
-                            `nav-item 
-                            ${styles['hover-bottom-border']} 
-                            ${links[1]['is_active']}`
-                        }>
-                            <Link href="/listing">
-                                <a className="nav-link">Find a job</a>
-                            </Link>
-                        </li>
+                        {
+                            links.map((link, ndx) => {
 
-                        <li className={`
-                            nav-item 
-                            ${styles['hover-bottom-border']}
-                            ${links[2]['is_active']}
-                        `}>
-                            <Link href="/">
-                                <a className="nav-link">Companies</a>
-                            </Link>
-                        </li>
+                                if (ndx == 0) return null
 
-                        <li className={`
-                            nav-item 
-                            ${styles['hover-bottom-border']}
-                            ${links[3]['is_active']}
-                        `}>
-                            <Link href="/">
-                                <a className="nav-link">Post a Job</a>
-                            </Link>
-                        </li>
+                                return (
+                                    <li key={ndx} className={
+                                        `nav-item 
+                                        ${styles['hover-bottom-border']} 
+                                        ${link['is_active']}`
+                                    }>
+                                        <Link href={link.route}>
+                                            <a className="nav-link">{link.name}</a>
+                                        </Link>
+                                    </li>
+                                )
+                            })
+                        }
                     </ul>
 
                     <div className={styles['navbar-pipe']}>
