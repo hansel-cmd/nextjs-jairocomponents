@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
@@ -18,15 +17,8 @@ export default function Home() {
               <div className="row">
                 <div className="col-sm-9 mt-2">
                   <div className="input-group flex-nowrap">
-                    <input type="text" placeholder="Search jobs here..."
-                      className={`
-                      form-control
-                      ${styles['no-border-right']}
-                    `} />
-                    <span className={`
-                      input-group-text
-                      ${styles['no-background']}
-                    `} id="addon-wrapping">
+                    <input type="text" placeholder="Search jobs here..." className="form-control no-border-right"/>
+                    <span className="input-group-text no-background" id="addon-wrapping">
                       <i className="bi bi-search"></i>
                     </span>
                   </div>

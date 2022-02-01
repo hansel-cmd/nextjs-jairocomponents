@@ -1,22 +1,3 @@
-.no-focus:focus {
-    border-color: #ced4da !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.no-focus:active {
-    outline: none !important;
-    border-color: #ced4da !important;
-}
-
-.no-background {
-    background-color: transparent !important;
-}
-  
-.no-border-right {
-    border-right: none !important;
-}
-
 .horizontal-separator {
     border-bottom: 1.2px solid #b7c6d3;
     height: 2.95rem;

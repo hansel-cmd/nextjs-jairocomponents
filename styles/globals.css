@@ -44,6 +44,33 @@
   border-radius: 1rem !important;
 }
 
+.no-focus:focus {
+  border-color: #ced4da !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.no-focus:active {
+  outline: none !important;
+  border-color: #ced4da !important;
+}
+
+.no-background {
+  background-color: transparent !important;
+}
+
+.no-border-right {
+  border-right: none !important;
+}
+
+.no-border-top {
+  border-top: none !important;
+}
+
+.no-border-bottom {
+  border-bottom: none !important;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

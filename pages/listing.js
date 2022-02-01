@@ -1,10 +1,14 @@
 import styles from '../styles/Listing.module.css'
 import LongCard from '../components/LongCard'
+import FilterModal from '../components/FilterModal'
 
 
 const Listing = () => {
     return (
-        <section className="text-dark p-5 px-2 px-lg-0 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <section className="text-dark p-5 px-2 px-lg-0 p-lg-0 pt-lg-5">
+
+            <FilterModal></FilterModal>
+
             <div className="container">
 
 
@@ -36,10 +40,11 @@ const Listing = () => {
                         </div>
 
 
-                        {/* Sort By */}
+                        {/* Sort By and Fiter Button */}
                         <div className="pt-2">
 
                             <div className="row">
+                                {/* Sort By */}
                                 <div className="col-lg-9 col-xl-10 mt-2">
                                     <div className="input-group flex-nowrap">
 
@@ -59,23 +64,19 @@ const Listing = () => {
                                     </div>
                                 </div>
 
+                                {/* Filter Button */}
                                 <div className="col-lg-3 col-xl-2 d-grid d-block mt-2">
-                                    <button type="button" className="btn btn-info">Filter <i className="bi bi-funnel-fill"></i></button>
+                                    <button type="button" className="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal">Filter <i className="bi bi-funnel-fill"></i></button>
                                 </div>
                             </div>
 
                         </div>
 
 
-                        <div className={
-                            styles['horizontal-separator']
-                        }>
-
-                        </div>
+                        <div className={styles['horizontal-separator']}></div>
 
 
                         <div className="pt-4">
-
                             <LongCard></LongCard>
                         </div>
 
