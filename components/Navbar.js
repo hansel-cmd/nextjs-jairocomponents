@@ -23,7 +23,7 @@ const Navbar = () => {
             is_active: '',
         },
         {
-            route: '/post a job', // post a job
+            route: '/post-a-job', // post a job
             name: 'Post a job',
             is_active: '',
         }
