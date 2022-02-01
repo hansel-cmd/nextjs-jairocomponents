@@ -64,7 +64,7 @@ const Listing = () => {
 
                                 {/* Filter Button */}
                                 <div className="col-lg-3 col-xl-2 d-grid d-block mt-2">
-                                    <button type="button" className="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal">Filter <i className="bi bi-funnel-fill"></i></button>
+                                    <button type="button" className="btn btn-info shadow-sm" data-bs-toggle="modal" data-bs-target="#modal">Filter <i className="bi bi-funnel-fill"></i></button>
                                 </div>
                             </div>
 
