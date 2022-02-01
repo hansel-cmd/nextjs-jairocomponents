@@ -71,6 +71,10 @@
   border-bottom: none !important;
 }
 
+.border-highlight-left {
+  border-left: 10px solid var(--bs-info) !important;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
