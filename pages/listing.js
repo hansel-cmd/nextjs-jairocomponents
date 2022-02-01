@@ -5,13 +5,11 @@ import FilterModal from '../components/FilterModal'
 
 const Listing = () => {
     return (
-        <section className="text-dark p-5 px-2 px-lg-0 p-lg-0 pt-lg-5">
+        <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
 
             <FilterModal></FilterModal>
 
-            <div className="container">
-
-
+            <div className="container px-0">
 
                 <div className="row">
 
@@ -24,7 +22,7 @@ const Listing = () => {
                                 <div className="input-group flex-nowrap">
                                     <input type="text" placeholder="Search jobs here..."
                                         className={`
-                                        form-control
+                                        form-control shadow-sm
                                         ${styles['no-border-right']}
                                         ${styles['no-focus']}
                                     `} />
@@ -55,7 +53,7 @@ const Listing = () => {
                                             Sort By
                                         </span>
 
-                                        <select id="sortBy" className="form-select" role="button" aria-label="sort-by">
+                                        <select id="sortBy" className="form-select shadow-sm" role="button" aria-label="sort-by">
                                             <option defaultValue>Default Value</option>
                                             <option value="x">Lorem, ipsum dolor.</option>
                                             <option value="y">Lorem, ipsum.</option>
@@ -77,7 +75,7 @@ const Listing = () => {
 
 
                         <div className="pt-4">
-                            <LongCard></LongCard>
+                            { [1,2,3,4,5].map(() => <LongCard></LongCard>) }
                         </div>
 
 

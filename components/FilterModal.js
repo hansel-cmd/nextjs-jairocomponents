@@ -20,7 +20,7 @@ const FilterModal = () => {
                                     Industry
                                 </span>
 
-                                <select id="industry" className="form-select mt-2" role="button" aria-label="industry">
+                                <select id="industry" className="form-select mt-2 shadow-sm" role="button" aria-label="industry">
                                     <option defaultValue>Default</option>
                                     <option value="x">Lorem, ipsum dolor.</option>
                                     <option value="y">Lorem, ipsum.</option>
@@ -35,7 +35,7 @@ const FilterModal = () => {
                                     Company
                                 </span>
 
-                                <select id="company" className="form-select mt-2" role="button" aria-label="company">
+                                <select id="company" className="form-select mt-2 shadow-sm" role="button" aria-label="company">
                                     <option defaultValue>Default</option>
                                     <option value="x">Lorem, ipsum dolor.</option>
                                     <option value="y">Lorem, ipsum.</option>
@@ -50,7 +50,7 @@ const FilterModal = () => {
                                     Employee Type
                                 </span>
 
-                                <select id="employeeType" className="form-select mt-2" role="button" aria-label="employee-type">
+                                <select id="employeeType" className="form-select mt-2 shadow-sm" role="button" aria-label="employee-type">
                                     <option defaultValue>Default</option>
                                     <option value="x">Lorem, ipsum dolor.</option>
                                     <option value="y">Lorem, ipsum.</option>
