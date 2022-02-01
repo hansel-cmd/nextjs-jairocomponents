@@ -75,6 +75,10 @@
   border-left: 10px solid var(--bs-info) !important;
 }
 
+.fs-7 {
+  font-size: 0.813rem !important;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
