@@ -46,7 +46,7 @@ const CardDetails = () => {
 
                 <div className="row mb-4">
                     <div className="col d-grid d-block">
-                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">More Details</button>
+                        <button type="button" className="btn btn-outline-secondary" data-bs-dismiss="modal">More Details</button>
                     </div>
                     <div className="col d-grid d-block">
                         <button type="button" className="btn btn-info">Apply Now</button>
