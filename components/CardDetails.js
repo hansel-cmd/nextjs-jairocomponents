@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 const CardDetails = ({details}) => {
     const router = useRouter()
     return (
+    <>
         <div className="card rounded-5 mb-4 shadow border border-info">
 
             <div className="card-header no-border-bottom bg-transparent pt-4 px-4">
@@ -52,12 +53,12 @@ const CardDetails = ({details}) => {
                         <button type="button" className="btn btn-outline-secondary" data-bs-dismiss="modal" onClick={()=>{router.push(`/view-job/${details.company.toLowerCase().replace(/ /g,"-")}/${details.title.toLowerCase().replace(/ /g,"-")}`)}}>More Details</button>
                     </div>
                     <div className="col d-grid d-block">
-                        <button type="button" className="btn btn-info">Apply Now</button>
-
+                        <button type="button" className="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal1">Apply Now</button>
                     </div>
                 </div>
             </div>
         </div>
+    </>
     );
 }
 

@@ -3,6 +3,7 @@ import styles from '../styles/Listing.module.css'
 import LongCard from '../components/LongCard'
 import FilterModal from '../components/FilterModal'
 import CardDetails from '../components/CardDetails'
+import ApplyModal from '../components/ApplyModal'
 import { mainFeaturedProduct as jobDesc, companyInformation as companyInfo } from './testData.js';
 import { useRouter } from 'next/router'
 
@@ -107,6 +108,8 @@ const Listing = () => {
                             </div>
                         </div>
                     </div>
+
+                    <ApplyModal></ApplyModal>
                 </div>
             </div>
         </section>

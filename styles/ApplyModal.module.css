@@ -1,0 +1,8 @@
+.resume::before {
+    content: "" !important;
+    display: block !important;
+}
+
+.resume::file-selector-button {
+    display: none !important;
+}
