@@ -1,24 +1,24 @@
-import { useEffect,useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Listing.module.css'
 import LongCard from '../components/LongCard'
 import FilterModal from '../components/FilterModal'
 import CardDetails from '../components/CardDetails'
-import {mainFeaturedProduct as jobDesc, companyInformation as companyInfo} from './testData.js';
+import { mainFeaturedProduct as jobDesc, companyInformation as companyInfo } from './testData.js';
 import { useRouter } from 'next/router'
 
 
 const Listing = () => {
     const router = useRouter()
     // STATES //
-    const [jobs,setJobs]=useState([])
-    const [currJob,setCurrJob]=useState({})
+    const [jobs, setJobs] = useState([])
+    const [currJob, setCurrJob] = useState({})
 
     useEffect(() => {
         setJobs(jobDesc)
         setCurrJob(jobDesc[0])
     }, []);
 
-    function detailsNavigation(company,job){
+    function detailsNavigation(company, job) {
         router.push(`/view-job/${company}/${job}`)
     }
     return (
@@ -91,7 +91,7 @@ const Listing = () => {
 
 
                         <div className="pt-4">
-                            { jobs.map((data,i) => <LongCard key={i} details={data} setJob={()=>{setCurrJob(data)}} ></LongCard>) }
+                            {jobs.map((data, i) => <LongCard key={i} details={data} setJob={() => { setCurrJob(data) }} ></LongCard>)}
                         </div>
 
 
@@ -99,7 +99,13 @@ const Listing = () => {
 
                     {/* card */}
                     <div className="col-lg-5 p-4">
-                        <CardDetails details={currJob}></CardDetails>
+                        <div style={{width: '35%'}}>
+                            <div style={{ width: 'inherit' }}>
+                                <div className="position-fixed" style={{ width: 'inherit', maxWidth: '510px' }}>
+                                    <CardDetails details={currJob}></CardDetails>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
