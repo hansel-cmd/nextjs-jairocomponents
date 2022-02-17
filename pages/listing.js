@@ -109,6 +109,7 @@ const Listing = () => {
                         </div>
                     </div>
 
+                    {/* Apply Now Modal */}
                     <ApplyModal></ApplyModal>
                 </div>
             </div>
