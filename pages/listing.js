@@ -1,10 +1,26 @@
+import { useEffect,useState } from 'react'
 import styles from '../styles/Listing.module.css'
 import LongCard from '../components/LongCard'
 import FilterModal from '../components/FilterModal'
 import CardDetails from '../components/CardDetails'
+import {mainFeaturedProduct as jobDesc, companyInformation as companyInfo} from './testData.js';
+import { useRouter } from 'next/router'
 
 
 const Listing = () => {
+    const router = useRouter()
+    // STATES //
+    const [jobs,setJobs]=useState([])
+    const [currJob,setCurrJob]=useState({})
+
+    useEffect(() => {
+        setJobs(jobDesc)
+        setCurrJob(jobDesc[0])
+    }, []);
+
+    function detailsNavigation(company,job){
+        router.push(`/view-job/${company}/${job}`)
+    }
     return (
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
 
@@ -13,7 +29,6 @@ const Listing = () => {
             <div className="container px-0">
 
                 <div className="row">
-
                     {/* list */}
                     <div className='col-lg-7 p-4'>
 
@@ -76,16 +91,15 @@ const Listing = () => {
 
 
                         <div className="pt-4">
-                            { [1,2,3,4,5].map((i) => <LongCard key={i}></LongCard>) }
+                            { jobs.map((data,i) => <LongCard key={i} details={data} setJob={()=>{setCurrJob(data)}} ></LongCard>) }
                         </div>
 
 
                     </div>
 
-
                     {/* card */}
                     <div className="col-lg-5 p-4">
-                        <CardDetails></CardDetails>
+                        <CardDetails details={currJob}></CardDetails>
                     </div>
                 </div>
             </div>

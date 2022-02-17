@@ -1,11 +1,14 @@
-const CardDetails = () => {
+import { useRouter } from 'next/router'
+
+const CardDetails = ({details}) => {
+    const router = useRouter()
     return (
         <div className="card rounded-5 mb-4 shadow border border-info">
 
             <div className="card-header no-border-bottom bg-transparent pt-4 px-4">
                 <div className="row">
                     <div className="col-10 col-sm-6">
-                        <h5 className="text-info">.NET Developer</h5>
+                        <h5 className="text-info">{details.title}</h5>
                         <p className="fs-6">Jairosoft Inc.</p>
                     </div>
                     <div className="col-2 col-sm-6 d-flex justify-content-end align-items-start">
@@ -46,7 +49,7 @@ const CardDetails = () => {
 
                 <div className="row mb-4">
                     <div className="col d-grid d-block">
-                        <button type="button" className="btn btn-outline-secondary" data-bs-dismiss="modal">More Details</button>
+                        <button type="button" className="btn btn-outline-secondary" data-bs-dismiss="modal" onClick={()=>{router.push(`/view-job/${details.company.toLowerCase().replace(/ /g,"-")}/${details.title.toLowerCase().replace(/ /g,"-")}`)}}>More Details</button>
                     </div>
                     <div className="col d-grid d-block">
                         <button type="button" className="btn btn-info">Apply Now</button>
