@@ -20,7 +20,7 @@ const Navbar = () => {
         {
             route: '/companies', // companies
             name: 'Companies',
-            is_active: '',
+            is_active: router.pathname == '/companies' ? styles['navbar-link-active'] : '',
         },
         {
             route: '/post-a-job', // post a job
