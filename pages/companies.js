@@ -1,4 +1,5 @@
 import styles from '../styles/Listing.module.css'
+import Link from 'next/link'
 
 const Companies = () => {
     return (
@@ -85,7 +86,9 @@ const Companies = () => {
 
                                 <div className="row mb-4">
                                     <div className="col d-grid d-block">
-                                        <button type="button" className="btn btn-info">View Company</button>
+                                        <Link href={`view-company-jobs/[indicate_company_name]`}>
+                                            <button type="button" className="btn btn-info">View Company</button>
+                                        </Link>
                                     </div>
                                     <div className="col d-grid d-block">
                                         <button type="button" className="btn btn-dark">Follow <span></span><i class="bi bi-check2-square"></i></button>
