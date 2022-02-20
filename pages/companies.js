@@ -1,5 +1,3 @@
-import styles from '../styles/Listing.module.css'
-
 const Companies = () => {
     return (
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
