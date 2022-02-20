@@ -1,4 +1,3 @@
-import styles from '../styles/Listing.module.css'
 import Link from 'next/link'
 
 const Companies = () => {
@@ -19,7 +18,7 @@ const Companies = () => {
                                         <div className="card-header no-border-bottom bg-transparent pt-4 px-4">
                                             <h5 className="text-info">
                                                 <span class="navbar-brand">
-                                                    <img src="logo.png" alt="" width="50" height="24" />
+                                                    <img src="/logo.png" alt="" width="50" height="24" />
                                                 </span>
                                                 Company Name
                                             </h5>
@@ -50,7 +49,7 @@ const Companies = () => {
                                     <div className="col-10 col-sm-6">
                                         <h5 className="text-info">
                                             <span class="navbar-brand">
-                                                <img src="logo.png" alt="" width="50" height="24" />
+                                                <img src="/logo.png" alt="" width="50" height="24" />
                                             </span>
                                             Company Name
                                         </h5>
