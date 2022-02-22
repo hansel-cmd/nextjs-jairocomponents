@@ -45,7 +45,7 @@ const CompanyCardDetails = () => {
 
                 <div className="row mb-4">
                     <div className="col d-grid d-block">
-                        <Link href={`view-company-jobs/[indicate_company_name]`}>
+                        <Link href={`/view-company-jobs/[indicate_company_name]`}>
                             <button type="button" className="btn btn-info">View Company</button>
                         </Link>
                     </div>
