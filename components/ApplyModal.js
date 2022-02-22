@@ -2,7 +2,7 @@ import styles from '../styles/ApplyModal.module.css'
 
 const ApplyModal = () => {
     return (
-        <div className="modal fade" id="modal1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalLabel" aria-hidden="true">
+        <div className="modal fade" id="apply_now_modal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalLabel" aria-hidden="true">
             <div className="modal-dialog modal-lg modal-dialog-centered">
                 <div className="modal-content">
 

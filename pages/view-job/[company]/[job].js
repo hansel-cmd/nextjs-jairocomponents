@@ -1,4 +1,5 @@
 import CompanyCardDetails from "../../../components/CompanyCardDetails"
+import ApplyModal from "../../../components/ApplyModal"
 
 const JobPage = () => {
     return (
@@ -20,7 +21,7 @@ const JobPage = () => {
                                         </h3>
                                     </div>
                                     <div className="col-md-4 col-lg-2">
-                                        <button type="button" className="btn btn-info rounded-4 w-100 p-2">Apply Now</button>
+                                        <button type="button" className="btn btn-info rounded-4 w-100 p-2" data-bs-toggle="modal" data-bs-target="#apply_now_modal">Apply Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +121,7 @@ const JobPage = () => {
                                     </ul>
                                 </div>
 
-                                <button type="button" className="btn btn-info rounded-4 px-4">Apply Now</button>
+                                <button type="button" className="btn btn-info rounded-4 px-4" data-bs-toggle="modal" data-bs-target="#apply_now_modal">Apply Now</button>
 
                             </div>
                         </div>
@@ -137,6 +138,10 @@ const JobPage = () => {
                     </div>
 
                 </div>
+                
+                
+                {/* Apply Modal */}
+                <ApplyModal></ApplyModal>
             </div>
         </section>
     );
