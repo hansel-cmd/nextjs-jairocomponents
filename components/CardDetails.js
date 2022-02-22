@@ -53,7 +53,7 @@ const CardDetails = ({details}) => {
                         <button type="button" className="btn btn-outline-secondary" data-bs-dismiss="modal" onClick={()=>{router.push(`/view-job/${details.company.toLowerCase().replace(/ /g,"-")}/${details.title.toLowerCase().replace(/ /g,"-")}`)}}>More Details</button>
                     </div>
                     <div className="col d-grid d-block">
-                        <button type="button" className="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal1">Apply Now</button>
+                        <button type="button" className="btn btn-info" data-bs-toggle="modal" data-bs-target="#apply_now_modal">Apply Now</button>
                     </div>
                 </div>
             </div>
