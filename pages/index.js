@@ -8,10 +8,13 @@ export default function Home() {
             
             {/* left */}
             <div className='col-lg-6'>
-              <h1>Lorem ipsum dolor sit amet, <span className="text-warning"> consectetur adipisicing elit.</span></h1>
-              <p className="lead my-4">
+              <div className='textContainer'>
+              <h1 className='homeHeader'>Get hired <br></br>by top notch <br></br>Company</h1>
+              </div>
+
+              {/* <p className="lead my-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eaque, itaque laborum assumenda autem id harum nobis blanditiis aspernatur modi eligendi dolorum repellat expedita cumque atque illum sit dolore fugit provident aperiam! Quia mollitia nobis libero assumenda excepturi maiores numquam.
-              </p>
+              </p> */}
 
               {/* Search and Button */}
               <div className="row">
