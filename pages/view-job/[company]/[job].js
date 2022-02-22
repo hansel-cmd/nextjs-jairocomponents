@@ -29,10 +29,8 @@ const JobPage = () => {
                     </div>
                 </div>
 
-
-
+                {/* Content */}
                 <div className="row pb-4">
-
 
                     {/* left: Description */}
                     <div className='col-lg-8 px-4'>
@@ -131,13 +129,12 @@ const JobPage = () => {
                     {/* right: Cards */}
                     <div className="col-lg-4 p-4">
 
-                        
+                        <div className="card rounded-5 mb-4 shadow border border-info">
+                            <img src="/test.jpg" class="card-img-top rounded-5" />
+                        </div>
 
                         <CompanyCardDetails></CompanyCardDetails>
-
-
                     </div>
-
 
                 </div>
             </div>
