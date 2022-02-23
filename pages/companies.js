@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const Companies = () => {
     return (
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
@@ -16,7 +18,7 @@ const Companies = () => {
                                         <div className="card-header no-border-bottom bg-transparent pt-4 px-4">
                                             <h5 className="text-info">
                                                 <span class="navbar-brand">
-                                                    <img src="logo.png" alt="" width="50" height="24" />
+                                                    <img src="/logo.png" alt="" width="50" height="24" />
                                                 </span>
                                                 Company Name
                                             </h5>
@@ -47,7 +49,7 @@ const Companies = () => {
                                     <div className="col-10 col-sm-6">
                                         <h5 className="text-info">
                                             <span class="navbar-brand">
-                                                <img src="logo.png" alt="" width="50" height="24" />
+                                                <img src="/logo.png" alt="" width="50" height="24" />
                                             </span>
                                             Company Name
                                         </h5>
@@ -83,7 +85,9 @@ const Companies = () => {
 
                                 <div className="row mb-4">
                                     <div className="col d-grid d-block">
-                                        <button type="button" className="btn btn-info">View Company</button>
+                                        <Link href={`view-company-jobs/[indicate_company_name]`}>
+                                            <button type="button" className="btn btn-info">View Company</button>
+                                        </Link>
                                     </div>
                                     <div className="col d-grid d-block">
                                         <button type="button" className="btn btn-dark">Follow <span></span><i class="bi bi-check2-square"></i></button>
