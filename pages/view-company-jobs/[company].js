@@ -1,5 +1,3 @@
-import LongCard from "../../components/LongCard"
-
 const Company = () => {
 
     return (
@@ -8,7 +6,6 @@ const Company = () => {
             <div className="container px-0">
 
                 <div className="row">
-                    {/* list */}
                     <div className='col-lg-8 p-4'>
 
                         {/* Company Details */}
@@ -51,7 +48,7 @@ const Company = () => {
 
                                 <div className="pb-3">
                                     <h6>About</h6>
-                                    <p className="text-secondary text-justify" style={{ textAlign: 'justify' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinction. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet possimus minima sint eius quos iusto sed rem unde voluptates, pariatur fuga voluptatum provident itaque voluptate laborum in repellendus ab, voluptatibus quam magni quod! Consectetur dolore modi maxime, aspernatur ut cum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci eaque tenetur ab non tempore numquam quam dicta enim possimus dolor?</p>
+                                    <p className="text-secondary text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinction. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet possimus minima sint eius quos iusto sed rem unde voluptates, pariatur fuga voluptatum provident itaque voluptate laborum in repellendus ab, voluptatibus quam magni quod! Consectetur dolore modi maxime, aspernatur ut cum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci eaque tenetur ab non tempore numquam quam dicta enim possimus dolor?</p>
                                 </div>
 
                                 <div className="pb-3">

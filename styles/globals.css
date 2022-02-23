@@ -79,6 +79,10 @@
   font-size: 0.813rem !important;
 }
 
+.text-justify {
+  text-align: justify !important;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
