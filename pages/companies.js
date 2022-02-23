@@ -4,7 +4,7 @@ const Companies = () => {
     return (
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
 
-            <div className="container px-0">
+            <div className="container px-0 pt-5 pt-lg-0">
 
                 <div className="row">
                     {/* list */}
