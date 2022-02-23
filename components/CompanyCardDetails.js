@@ -8,7 +8,7 @@ const CompanyCardDetails = () => {
                 <div className="row">
                     <div className="col-12">
                         <h5 className="text-info">
-                            <span class="navbar-brand">
+                            <span className="navbar-brand">
                                 <img src="/logo.png" alt="" width="50" height="24" />
                             </span>
                             Company Name
@@ -50,7 +50,7 @@ const CompanyCardDetails = () => {
                         </Link>
                     </div>
                     <div className="col d-grid d-block">
-                        <button type="button" className="btn btn-dark">Follow <span></span><i class="bi bi-check2-square"></i></button>
+                        <button type="button" className="btn btn-dark">Follow <span></span><i className="bi bi-check2-square"></i></button>
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@ const Company = () => {
                                 <div className="card-header no-border-bottom bg-transparent py-2 px-4">
                                     <div className="row p-2 align-items-center">
                                         <div className="col-md-9 d-flex flex-wrap align-items-center">
-                                            <span class="navbar-brand">
+                                            <span className="navbar-brand">
                                                 <img src="/logo.png" alt="" width="90" height="90" />
                                             </span>
                                             <h3 className="text-info text-uppercase mb-0">
@@ -24,7 +24,7 @@ const Company = () => {
                                             </h3>
                                         </div>
                                         <div className="col-md-3 ">
-                                            <button type="button" className="btn btn-dark rounded-4 w-100 p-2">Follow <span></span><i class="bi bi-check2-square"></i></button>
+                                            <button type="button" className="btn btn-dark rounded-4 w-100 p-2">Follow <span></span><i className="bi bi-check2-square"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -63,9 +63,9 @@ const Company = () => {
                     <div className="col-lg-4 p-4">
                         <h4 className="fw-bold pb-4"><span className="text-info">Jobs</span> Available</h4>
 
-                        {[1, 2, 3, 4].map(() => {
+                        {[1, 2, 3, 4].map((i) => {
                             return (
-                                <div className="card rounded-5  mb-4 shadow border border-info" role="button" >
+                                <div className="card rounded-5  mb-4 shadow border border-info" role="button" key={i}>
                                     <div className="card-header no-border-bottom bg-transparent pt-4 px-4">
                                         <h6 className="text-info fw-bold">UI/UX Designer</h6>
                                     </div>

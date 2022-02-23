@@ -12,12 +12,12 @@ const Companies = () => {
 
                         {/* Company list */}
                         <div className="pt-0">
-                            {[1, 2, 3, 4, 5].map(() => {
+                            {[1, 2, 3, 4, 5].map((i) => {
                                 return (
-                                    <div className="card rounded-5 border-highlight-left mb-4 shadow" role="button">
+                                    <div className="card rounded-5 border-highlight-left mb-4 shadow" role="button" key={i}>
                                         <div className="card-header no-border-bottom bg-transparent pt-4 px-4">
                                             <h5 className="text-info">
-                                                <span class="navbar-brand">
+                                                <span className="navbar-brand">
                                                     <img src="/logo.png" alt="" width="50" height="24" />
                                                 </span>
                                                 Company Name
