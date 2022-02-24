@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import styles from '../styles/ApplyModal.module.css'
 
 const PostJob = () => {
@@ -9,7 +9,8 @@ const PostJob = () => {
     return (
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
 
-            <div   id="get_started_container" className="container px-0 pt-5 pt-lg-0 mt-5" style={{ display: !isFormActive ? 'block' : 'none' }}>
+            {/* Get started */}
+            <div id="get_started_container" className="container px-0 pt-5 pt-lg-0 mt-5" style={{ display: !isFormActive ? 'block' : 'none' }}>
 
                 <div className="row mt-5 pt-5 d-flex flex-column justify-content-center align-items-center align-items-center">
 
@@ -23,6 +24,7 @@ const PostJob = () => {
             </div>
 
 
+            {/* Form */}
             <div id="company_information_form_container" className="container px-0 py-5 pt-lg-0 mt-5 custom-width" style={{ display: isFormActive ? 'block' : 'none' }}>
 
                 <div className="row  d-flex flex-column justify-content-center align-items-center align-items-center">
@@ -70,6 +72,7 @@ const PostJob = () => {
 
                         <h4 className="fw-bold">Company Information</h4>
 
+                        {/* Company Logo */}
                         <div className="col-md-6">
                             <label htmlFor="company_logo" className="form-label">Company Logo</label>
                             <div className="input-group mb-3">
@@ -125,6 +128,7 @@ const PostJob = () => {
 
                 </div>
 
+                {/* Continue Btn */}
                 <button className="btn btn-info w-25 mt-2">Continue</button>
             </div>
         </section>
