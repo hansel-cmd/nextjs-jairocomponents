@@ -23,9 +23,9 @@ const Navbar = () => {
             is_active: router.pathname == '/companies' ? styles['navbar-link-active'] : '',
         },
         {
-            route: '/post-a-job', // post a job
+            route: '/post-job', // post a job
             name: 'Post a job',
-            is_active: '',
+            is_active: router.pathname == '/post-job' ? styles['navbar-link-active'] : '',
         }
     ]
 
