@@ -83,9 +83,17 @@
   text-align: justify !important;
 }
 
+.custom-width {
+  width: 100% !important;
+}
+
 @media (min-width: 576px) {
   .custom-max-width {
     max-width: 100% !important;
+  }
+
+  .custom-width {
+    width: 100% !important;
   }
 }
 
@@ -93,17 +101,27 @@
   .custom-max-width {
     max-width: 60% !important;
   }
+  
+  
 }
 
 @media (min-width: 992px) {
   .custom-max-width {
     max-width: 60% !important;
   }
+  
+  .custom-width {
+    width: 80% !important;
+  }
 }
 
 @media (min-width: 1200px) {
   .custom-max-width {
     max-width: 40% !important;
+  }
+
+  .custom-width {
+    width: 60% !important;
   }
 }
 

@@ -1,17 +1,15 @@
+import { useRef, useState } from 'react';
 import styles from '../styles/ApplyModal.module.css'
 
 const PostJob = () => {
 
-
-
-
-
-
+    const [isFormActive, setFormActive] = useState(false)
+    const toggleClass = () => setFormActive(!isFormActive)
 
     return (
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
 
-            <div className="container px-0 pt-5 pt-lg-0 mt-5">
+            <div   id="get_started_container" className="container px-0 pt-5 pt-lg-0 mt-5" style={{ display: !isFormActive ? 'block' : 'none' }}>
 
                 <div className="row mt-5 pt-5 d-flex flex-column justify-content-center align-items-center align-items-center">
 
@@ -20,14 +18,14 @@ const PostJob = () => {
                     </h3>
                     <p className="pt-3 custom-max-width text-center">Build your business with us. Work with our certified and experienced consultants, architects, and developers. We go above and beyond what's expected and will bring incredible high value to your business.</p>
 
-                    <button className="btn btn-info w-25 mt-2">Get Started</button>
+                    <button className="btn btn-info w-25 mt-2" onClick={toggleClass}>Get Started</button>
                 </div>
             </div>
 
 
-            <div className="container px-0 pt-5 pt-lg-0 mt-5 w-50">
+            <div id="company_information_form_container" className="container px-0 py-5 pt-lg-0 mt-5 custom-width" style={{ display: isFormActive ? 'block' : 'none' }}>
 
-                <div className="row mt-5 pt-5 d-flex flex-column justify-content-center align-items-center align-items-center">
+                <div className="row  d-flex flex-column justify-content-center align-items-center align-items-center">
 
                     <h3 className="fw-bold text-secondary">
                         Company Information
@@ -73,8 +71,12 @@ const PostJob = () => {
                         <h4 className="fw-bold">Company Information</h4>
 
                         <div className="col-md-6">
-                            <label htmlFor="first_name" className="form-label">First Name <span className='text-danger'>*</span></label>
-                            <input type="text" className="form-control" id="first_name" placeholder="Enter your first name..." required />
+                            <label htmlFor="company_logo" className="form-label">Company Logo</label>
+                            <div className="input-group mb-3">
+                                <input type="file" className={`form-control ${styles['resume']}`} id="company_logo" accept="image/png, image/gif, image/jpeg, image/jpg"/>
+                                <label className="input-group-text" htmlFor="company_logo" style={{ cursor: 'pointer' }}><i className="bi bi-cloud-upload"></i></label>
+                            </div>
+
                         </div>
 
                         {/* Company */}
@@ -115,7 +117,7 @@ const PostJob = () => {
                         {/* About your company */}
                         <div className="mb-3">
                             <label htmlFor="about" className="form-label">About your company</label>
-                            <textarea className="form-control" id="about" rows="6" placeholder="Tell us about your company..." style={{resize: "none"}}></textarea>
+                            <textarea className="form-control" id="about" rows="6" placeholder="Tell us about your company..." style={{ resize: "none" }}></textarea>
                         </div>
 
 
