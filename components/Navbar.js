@@ -5,6 +5,7 @@ import Link from 'next/link'
 const Navbar = () => {
 
     const router = useRouter();
+    let showNav = router.pathname != '/sign-in' && router.pathname != '/sign-up'
 
     let links = [
         {
@@ -26,11 +27,11 @@ const Navbar = () => {
             route: '/post-job', // post a job
             name: 'Post a job',
             is_active: router.pathname == '/post-job' ? styles['navbar-link-active'] : '',
-        }
+        },
     ]
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom" style={{display: showNav ? 'block' : 'none'}}>
             <div className="container">
 
                 <Link href="/">
