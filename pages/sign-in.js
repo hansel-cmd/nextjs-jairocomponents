@@ -1,6 +1,6 @@
 const SignIn = () => {
     return ( 
-        <div>
+        <div style={{'backgroundColor': 'red'}}>
             hello world
         </div>
      );
