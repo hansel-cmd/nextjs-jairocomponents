@@ -26,11 +26,6 @@ const Navbar = () => {
             name: 'Post a job',
             is_active: router.pathname == '/post-job' ? styles['navbar-link-active'] : '',
         },
-        {
-            route: '/sign-in', // sign in page
-            name: 'Sign In',
-            is_active: ''
-        }
     ]
 
     return (
