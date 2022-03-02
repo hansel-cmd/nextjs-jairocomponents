@@ -87,6 +87,10 @@
   width: 100% !important;
 }
 
+.forgot-password-modal-max-width {
+  width: 75% !important;
+}
+
 @media (min-width: 576px) {
   .custom-max-width {
     max-width: 100% !important;
@@ -94,6 +98,10 @@
 
   .custom-width {
     width: 100% !important;
+  }
+
+  .forgot-password-modal-max-width {
+    width: 50% !important;
   }
 }
 
@@ -105,6 +113,10 @@
   .custom-width {
     width: 80% !important;
   }
+
+  .forgot-password-modal-max-width {
+    width: 40% !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -114,6 +126,10 @@
   
   .custom-width {
     width: 80% !important;
+  }
+
+  .forgot-password-modal-max-width {
+    width: 35% !important;
   }
 }
 
@@ -125,6 +141,10 @@
   .custom-width {
     width: 80% !important;
   }
+
+  .forgot-password-modal-max-width {
+    width: 30% !important;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -134,6 +154,10 @@
 
   .custom-width {
     width: 45% !important;
+  }
+
+  .forgot-password-modal-max-width {
+    width: 20% !important;
   }
 }
 
