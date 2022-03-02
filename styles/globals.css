@@ -87,10 +87,6 @@
   width: 100% !important;
 }
 
-.forgot-password-modal-max-width {
-  width: 75% !important;
-}
-
 @media (min-width: 576px) {
   .custom-max-width {
     max-width: 100% !important;
@@ -100,9 +96,6 @@
     width: 100% !important;
   }
 
-  .forgot-password-modal-max-width {
-    width: 50% !important;
-  }
 }
 
 @media (min-width: 769px) {
@@ -114,9 +107,6 @@
     width: 80% !important;
   }
 
-  .forgot-password-modal-max-width {
-    width: 40% !important;
-  }
 }
 
 @media (min-width: 992px) {
@@ -128,9 +118,6 @@
     width: 80% !important;
   }
 
-  .forgot-password-modal-max-width {
-    width: 35% !important;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -142,9 +129,6 @@
     width: 80% !important;
   }
 
-  .forgot-password-modal-max-width {
-    width: 30% !important;
-  }
 }
 
 @media (min-width: 1400px) {
@@ -156,9 +140,6 @@
     width: 45% !important;
   }
 
-  .forgot-password-modal-max-width {
-    width: 20% !important;
-  }
 }
 
 :root {
