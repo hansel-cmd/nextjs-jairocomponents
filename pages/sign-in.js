@@ -8,7 +8,7 @@ const SignIn = () => {
         'backgroundSize': 'cover',
         'backgroundClip': 'initial',
         'backgroundOrigin': 'initial',
-        'boxSizing':  'border-box'
+        'boxSizing': 'border-box'
     }
 
     return (
@@ -18,6 +18,8 @@ const SignIn = () => {
                     <div className="col-md-1 d-none d-lg-block"></div>
                     <div className="col-sm-12 col-md-6 col-lg-6 col-xl-4">
                         <div className="px-4 card rounded-5 mb-4 shadow ">
+
+                            {/* Logo */}
                             <div className="card-header no-border-bottom bg-transparent pt-4 px-4 pb-0">
                                 <div className="row">
                                     <div className="col-12">
@@ -29,6 +31,7 @@ const SignIn = () => {
                                     </div>
                                 </div>
                             </div>
+
                             <div className="card-body px-4 pt-0">
 
                                 <div className="pb-3">
@@ -67,7 +70,7 @@ const SignIn = () => {
                                 {/* Forgot Password */}
                                 <div className="row pb-3">
                                     <Link href="/">
-                                        <a className="text-center" style={{ 'textDecoration': 'none' }}>Forgot Password?</a>
+                                        <a className="text-center" style={{ 'textDecoration': 'none' }} data-bs-toggle="modal" data-bs-target="#forgot_password_modal">Forgot Password?</a>
                                     </Link>
                                 </div>
 
@@ -101,12 +104,58 @@ const SignIn = () => {
                                 </div>
 
                                 <div className="row pb-3">
-                                    <Link href="/">
+                                    <Link href="/sign-up">
                                         <a className="text-center h5">Create an Account</a>
                                     </Link>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {/* Forgot Password Modal */}
+            <div className="modal fade" id="forgot_password_modal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalLabel" aria-hidden="true">
+                <div className="modal-dialog ">
+                    <div className="modal-content pt-4">
+
+                        <div className="modal-body px-4 pt-0">
+
+                            <div className="container">
+
+                                <div className="pb-1">
+                                    <h3 className="fw-bold lh-1 mb-1">Forgot Password</h3>
+
+                                    <p className="text-secondary">
+                                        Enter the email address associated with your account.
+                                    </p>
+                                </div>
+
+                                <div className="py-2">
+                                    {/* Email Address: Forgot password */}
+                                    <div className="pb-3">
+                                        <input type="email" className="form-control shadow-sm" placeholder="Enter your email address..." />
+                                    </div>
+
+                                    {/* submit button */}
+                                    <div className="row mb-2">
+                                        <div className="col d-grid d-block">
+
+                                            <button type="button" className="btn btn-info mb-2">Submit</button>
+
+                                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
                     </div>
                 </div>
             </div>
