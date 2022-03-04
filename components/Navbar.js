@@ -1,12 +1,10 @@
 import styles from '../styles/Navbar.module.css'
-import { useRouter } from "next/router"
 import Link from 'next/link'
+import router, { useRouter } from 'next/router';
 
 const Navbar = () => {
 
-    const router = useRouter();
-    let showNav = router.pathname != '/sign-in' && router.pathname != '/sign-up'
-
+    const router = useRouter()
     let links = [
         {
             route: '/', // home
@@ -31,7 +29,7 @@ const Navbar = () => {
     ]
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom" style={{display: showNav ? 'block' : 'none'}}>
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom">
             <div className="container">
 
                 <Link href="/">
@@ -66,9 +64,11 @@ const Navbar = () => {
 
                     <div className={styles['navbar-pipe']}>
                     </div>
-                    <form className={`d-grid ${styles['btn-container']}`}>
-                        <button className="btn btn-outline-info px-6 rounded-4" type="submit">Sign In</button>
-                    </form>
+                    <div className={`d-grid ${styles['btn-container']}`}>
+                        <Link href="/sign-in">
+                            <button className="btn btn-outline-info px-6 rounded-4" type="submit">Sign In</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </nav>
