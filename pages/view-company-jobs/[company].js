@@ -1,3 +1,5 @@
+import FollowModal from "../../components/FollowModal";
+
 const Company = () => {
 
     return (
@@ -24,7 +26,7 @@ const Company = () => {
                                             </h3>
                                         </div>
                                         <div className="col-md-3 ">
-                                            <button type="button" className="btn btn-dark rounded-4 w-100 p-2">Follow <span></span><i className="bi bi-check2-square"></i></button>
+                                            <button type="button" className="btn btn-dark rounded-4 w-100 p-2" data-bs-toggle="modal" data-bs-target="#follow_modal">Follow <span></span><i className="bi bi-check2-square"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -96,6 +98,8 @@ const Company = () => {
                     </div>
 
 
+                    {/* Follow Modal */}
+                    <FollowModal></FollowModal>
                 </div>
             </div>
         </section>
