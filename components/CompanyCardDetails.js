@@ -1,3 +1,4 @@
+import FollowModal from './FollowModal';
 import Link from 'next/link'
 
 const CompanyCardDetails = () => {
@@ -50,10 +51,13 @@ const CompanyCardDetails = () => {
                         </Link>
                     </div>
                     <div className="col d-grid d-block">
-                        <button type="button" className="btn btn-dark">Follow <span></span><i className="bi bi-check2-square"></i></button>
+                        <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#follow_modal">Follow <span></span><i className="bi bi-check2-square"></i></button>
                     </div>
                 </div>
             </div>
+
+            {/* Follow Modal */}
+            <FollowModal></FollowModal>
         </div>
     );
 }
