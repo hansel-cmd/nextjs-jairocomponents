@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 const SignIn = () => {
 
@@ -63,7 +63,7 @@ const SignIn = () => {
                                 {/* sign in button */}
                                 <div className="row mb-4">
                                     <div className="col d-grid d-block">
-                                        <Link href={`/view-company-jobs/[indicate_company_name]`}>
+                                        <Link href={`/my-profile`}>
                                             <button type="button" className="btn btn-secondary" onClick={signIn}>Sign In</button>
                                         </Link>
                                     </div>
