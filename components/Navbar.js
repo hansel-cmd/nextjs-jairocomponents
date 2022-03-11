@@ -1,8 +1,22 @@
 import styles from '../styles/Navbar.module.css'
 import Link from 'next/link'
 import router, { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+
 
 const Navbar = () => {
+
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+    // change isLoggedIn value inside local storage 
+    // to see navbar for a user who's not logged in
+    useEffect(() => {
+        (() => { 
+            // important: localStorage.getItem() returns a string
+            setIsLoggedIn(localStorage.getItem("isLoggedIn"))
+        })()
+    }, [])
+
 
     const router = useRouter()
     let links = [
@@ -43,9 +57,11 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul className={`navbar-nav mb-2 mb-lg-0 ${styles['navbar-ul']}`}>
                         {
+
                             links.map((link, ndx) => {
 
                                 if (ndx == 0) return null
+                                if (ndx == 3 && isLoggedIn == "true") return null
 
                                 return (
                                     <li key={ndx} className={
