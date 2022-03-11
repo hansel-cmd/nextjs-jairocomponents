@@ -83,6 +83,10 @@
   text-align: justify !important;
 }
 
+.custom-opacity {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
 .custom-width {
   width: 100% !important;
 }
