@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import ExpectedSalaryModal from '../components/ExpectedSalaryModal'
 import styles from '../styles/MyProfile.module.css'
 
 const MyProfile = () => {
@@ -10,6 +11,7 @@ const MyProfile = () => {
     return (
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
 
+            <ExpectedSalaryModal></ExpectedSalaryModal>
 
 
             <div className="container px-0">
@@ -100,7 +102,7 @@ const MyProfile = () => {
                                                     <p className="fs-6 fw-bold">N/A</p>
                                                 </div>
                                                 <div className="col-2 col-sm-6 d-flex justify-content-end align-items-start">
-                                                    <button className="btn rounded-4 fs-4 text-info"><i className="bi bi-pencil-square"></i></button>
+                                                    <button className="btn rounded-4 fs-4 text-info" data-bs-target="#expected_salary_modal" data-bs-toggle="modal"><i className="bi bi-pencil-square"></i></button>
                                                 </div>
                                             </div>
                                         </div>
