@@ -13,28 +13,27 @@ const MyProfile = () => {
 
             <ExpectedSalaryModal></ExpectedSalaryModal>
 
-
             <div className="container px-0">
-
                 <div className="row">
 
-                    {/* Profile */}
                     <div className='col-lg-8 p-4'>
 
+                        {/* Profile Card */}
                         <div className="card rounded-5 border-highlight-left mb-4 shadow">
-
                             <div className="card-header no-border-bottom bg-transparent pt-3 px-4">
+                                {/* Edit Profile Icon */}
                                 <div className="row">
                                     <div className="col d-flex justify-content-end align-items-end">
-                                        <button className="btn rounded-4 text-info"><i className="bi bi-pencil-square h3"></i></button>
+                                        <button className="btn rounded-4 text-info"><i className="bi bi-pencil-square h5"></i></button>
                                     </div>
                                 </div>
+                                {/* Profile Image, and Name */}
                                 <div className="row">
                                     <div className="col">
                                         <div className="row align-items-center">
                                             <div className="col-4 col-sm-3 d-flex justify-content-center">
                                                 <div className="position-relative">
-                                                    <img src="/velvet.png" className="img-fluid border p-1 border-info rounded-circle bg-none p-0" height="150" width="150" style={{ minHeight: "110px", minWidth: "110px" }}/>
+                                                    <img src="/velvet.png" className="border p-1 border-info rounded-circle bg-none p-0" height="150" width="150" style={{ minHeight: "110px", minWidth: "110px" }}/>
                                                     <div class={`${styles['upload-image-inner-container']}`}>
                                                         <input class={styles['inputfile']} type="file" name="pic" accept="image/*" style={{cursor: "pointer"}}/>
                                                         <label><i class="bi bi-camera-fill text-info" height="30" width="30"></i></label>
@@ -52,11 +51,11 @@ const MyProfile = () => {
                                 </div>
                             </div>
 
+                            {/* Personal Information */}
                             <div className="card-body px-4">
-
                                 <div className="px-4 pb-4">
                                     <h3 className="fw-bold"><span className="text-info">Personal</span> Information</h3>
-                                    <div className="row">
+                                    <div className="row pt-2">
                                         <div className="col-12 col-sm-6">
                                             <h6 className="text-secondary">Email Address</h6>
                                             <p className="text-dark fw-bold">mainragna31@gmail.com</p>
