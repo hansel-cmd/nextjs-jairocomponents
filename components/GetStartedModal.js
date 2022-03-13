@@ -47,25 +47,25 @@ const GetStartedModal = () => {
                                 <div className="pb-3">
                                     <p className="fw-bold mb-0">
                                         <span className="ps-2 pe-3 text-danger fw-bold">
-                                            <i class="bi bi-x"></i>
+                                            <i className="bi bi-x"></i>
                                         </span>
                                         1. Upload a Photo
                                     </p>
                                     <p className="fw-bold mb-0">
                                         <span className="ps-2 pe-3 text-success fw-bold">
-                                            <i class="bi bi-check"></i>
+                                            <i className="bi bi-check"></i>
                                         </span>
                                         2. Fill your Personal Information
                                     </p>
                                     <p className="fw-bold mb-0">
                                         <span className="ps-2 pe-3 text-success fw-bold">
-                                            <i class="bi bi-check"></i>
+                                            <i className="bi bi-check"></i>
                                         </span>
                                         3. Upload your Resume
                                     </p>
                                     <p className="fw-bold">
                                         <span className="ps-2 pe-3 text-danger fw-bold">
-                                            <i class="bi bi-x"></i>
+                                            <i className="bi bi-x"></i>
                                         </span>
                                         4. Add your expected Salary
                                     </p>
