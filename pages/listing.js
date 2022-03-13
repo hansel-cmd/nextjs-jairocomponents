@@ -37,17 +37,9 @@ const Listing = () => {
                         <div className="row">
                             <div className="col mt-2">
                                 <div className="input-group flex-nowrap">
-                                    <input type="text" placeholder="Search jobs here..."
-                                        className={`
-                                        form-control shadow-sm
-                                        ${styles['no-border-right']}
-                                        ${styles['no-focus']}
-                                    `} />
+                                    <input type="text" placeholder="Search jobs here..." className="form-control shadow-sm no-border-right' no-focus" />
 
-                                    <span className={`
-                                        input-group-text
-                                        ${styles['no-background']}
-                                    `} id="addon-wrapping">
+                                    <span className="input-group-text no-background" id="addon-wrapping">
                                         <i className="bi bi-search"></i>
                                     </span>
                                 </div>
@@ -63,10 +55,7 @@ const Listing = () => {
                                 <div className="col-lg-9 col-xl-10 mt-2">
                                     <div className="input-group flex-nowrap">
 
-                                        <span className={`
-                                    input-group-text
-                                    ${styles['no-background']}
-                                `} id="addon-wrapping">
+                                        <span className="input-group-text no-background" id="addon-wrapping">
                                             Sort By
                                         </span>
 
@@ -100,7 +89,7 @@ const Listing = () => {
 
                     {/* card */}
                     <div className="col-lg-5 p-4">
-                        <div style={{width: '35%'}}>
+                        <div style={{ width: '35%' }}>
                             <div style={{ width: 'inherit' }}>
                                 <div className="position-fixed" style={{ width: 'inherit', maxWidth: '510px' }}>
                                     <CardDetails details={currJob}></CardDetails>

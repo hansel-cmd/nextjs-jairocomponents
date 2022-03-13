@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react"
-
+import Link from 'next/link'
 
 const GetStartedModal = () => {
 
@@ -73,9 +73,10 @@ const GetStartedModal = () => {
 
                                 {/* Follow button */}
                                 <div className="row mb-2">
-                                    <div className="col d-grid d-block">
-
-                                        <button type="button" className="btn btn-info">Go to My Profile</button>
+                                    <div className="col d-grid d-block" onClick={() => closeGetStartedModal()}>
+                                        <Link href="/my-profile" >
+                                            <button type="button" className="btn btn-info">Go to My Profile</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
