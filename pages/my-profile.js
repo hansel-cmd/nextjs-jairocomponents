@@ -18,9 +18,10 @@ const MyProfile = () => {
             <div className="container px-0 pt-5 pt-lg-0">
                 <div className="row">
 
+                    {/* Profile Card */}
                     <div className='col-lg-8 px-4 pt-4 pb-0 pb-sm-4'>
 
-                        {/* Profile Card */}
+                        {/* Personal Info Card */}
                         <div className="card rounded-5 border-highlight-left mb-4 shadow">
                             <div className="card-header no-border-bottom bg-transparent pt-3 px-4">
                                 {/* Edit Profile Icon */}
@@ -116,9 +117,9 @@ const MyProfile = () => {
                         </div>
 
                         {/* Calendar */}
-                        <div className="pt-4 card rounded-5 mb-4 shadow">
-                            <div className="row">
-                                <div className="col">
+                        <div className="pt-4 pb-4 card rounded-5 mb-4 shadow">
+                            <div className="row py-4">
+                                <div className="col d-flex justify-content-center align-items-center">
                                     Calendar Container
                                 </div>
                             </div>
@@ -170,8 +171,8 @@ const MyProfile = () => {
                         </div>
                     </div>
 
+                    {/* Right Floating Item */}
                     <div className="col-lg-4 px-4 pt-0 pt-sm-4 pb-4">
-                        {/* Right Floating Item */}
                         <div>
                             <div className={`${styles['position-fixed']} ${styles['position-fixed-container']}`}>
 
