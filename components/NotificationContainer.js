@@ -49,9 +49,6 @@ const NotificationContainer = ({info}) => {
                 </div>
 
 
-
-
-
             </div>
             <div className="card-footer bg-transparent">
                 <button className="btn btn-info w-100 py-1">All {info.title}</button>
