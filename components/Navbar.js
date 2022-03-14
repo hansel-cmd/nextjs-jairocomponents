@@ -1,4 +1,5 @@
 import styles from '../styles/Navbar.module.css'
+import NotificationContainer from './NotificationContainer'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
@@ -81,18 +82,44 @@ const Navbar = () => {
                     <div className={styles['navbar-pipe']}>
                     </div>
 
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-center justify-content-between flex-lg-row flex-row-reverse">
+
+                        {/* Messages and Notifications button : when logged in */}
+
                         <div className={`align-items-center justify-content-center ${styles['btn-container']}`} style={{ display: isLoggedIn == "true" ? "flex" : "none" }}>
-                            <span className="h3 text-info pe-2 mb-0" role="button"><i className="bi bi-envelope"></i></span>
-                            <span className="h3 text-info ps-2 pe-3 mb-0" role="button"><i className="bi bi-bell-fill"></i></span>
+                            
+                            {/* Message Icon */}
+                            <div className="dropdown dropstart">
+                                <span className="h3 text-info ps-2 pe-3 mb-0" role="button" data-bs-toggle="dropdown"><i className="bi bi-envelope"></i></span>
+
+                                <div className="dropdown-menu py-0" style={{border: "none"}}>
+                                    <div>
+                                        <NotificationContainer info={{title: "Messages"}}></NotificationContainer>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Notif Icon */}
+                            <div className="dropdown dropstart">
+                                <span className="h3 text-info ps-2 pe-3 mb-0" role="button" data-bs-toggle="dropdown"><i className="bi bi-bell-fill"></i></span>
+
+                                <div className="dropdown-menu py-0" style={{border: "none"}}>
+                                    <div>
+                                        <NotificationContainer info={{title: "Notifications"}}></NotificationContainer>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div className={`d-grid ${styles['btn-container']}`}>
 
+                            {/* Sign In Button : when not logged in */}
                             <Link href="/sign-in">
                                 <button className="btn btn-outline-info px-6 rounded-4" type="submit" style={{ display: isLoggedIn == "true" ? "none" : "block" }}>Sign In</button>
                             </Link>
 
+                            {/* My Account Button : when logged in */}
                             <div className="dropdown" style={{ display: isLoggedIn == "true" ? "block" : "none" }}>
                                 <button className="btn btn-outline-info px-4 rounded-4 dropdown-toggle" type="button" id="my_account" data-bs-toggle="dropdown" aria-expanded="false">
                                     My Account

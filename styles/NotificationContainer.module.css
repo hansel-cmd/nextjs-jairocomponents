@@ -1,0 +1,19 @@
+.custom-scrollbar {
+    overflow-y: scroll !important;
+
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    -ms-overflow-style: none;
+    width: 2px;
+    background: transparent;
+}
+
+.notif-container {
+    border: none;
+    width: 350px;
+    min-width: 250px; 
+    height: 500px; 
+    min-height: 500px;
+}
+
