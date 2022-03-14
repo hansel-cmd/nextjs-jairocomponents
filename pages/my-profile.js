@@ -1,5 +1,6 @@
 import ExpectedSalaryModal from '../components/ExpectedSalaryModal'
 import styles from '../styles/MyProfile.module.css'
+import PersonalInformationModal from '../components/PersonalInformationModal'
 import Link from 'next/link'
 
 const MyProfile = () => {
@@ -12,6 +13,7 @@ const MyProfile = () => {
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
 
             <ExpectedSalaryModal></ExpectedSalaryModal>
+            <PersonalInformationModal></PersonalInformationModal>
 
             <div className="container px-0">
                 <div className="row">
@@ -24,7 +26,7 @@ const MyProfile = () => {
                                 {/* Edit Profile Icon */}
                                 <div className="row">
                                     <div className="col d-flex justify-content-end align-items-end">
-                                        <button className="btn rounded-4 text-info"><i className="bi bi-pencil-square h5"></i></button>
+                                        <button className="btn rounded-4 text-info" data-bs-target="#personal_information_modal" data-bs-toggle="modal" role="button"><i className="bi bi-pencil-square h5"></i></button>
                                     </div>
                                 </div>
                                 {/* Profile Image, and Name */}
@@ -33,9 +35,9 @@ const MyProfile = () => {
                                         <div className="row align-items-center">
                                             <div className="col-4 col-sm-3 d-flex justify-content-center">
                                                 <div className="position-relative">
-                                                    <img src="/velvet.png" className="border p-1 border-info rounded-circle bg-none p-0" height="150" width="150" style={{ minHeight: "110px", minWidth: "110px" }}/>
+                                                    <img src="/velvet.png" className="border p-1 border-info rounded-circle bg-none p-0" height="120" width="120" style={{ minHeight: "100px", minWidth: "100px" }} />
                                                     <div class={`${styles['upload-image-inner-container']}`}>
-                                                        <input class={styles['inputfile']} type="file" name="pic" accept="image/*" style={{cursor: "pointer"}}/>
+                                                        <input class={styles['inputfile']} type="file" name="pic" accept="image/*" style={{ cursor: "pointer" }} />
                                                         <label><i class="bi bi-camera-fill text-info" height="30" width="30"></i></label>
                                                     </div>
                                                 </div>
@@ -82,13 +84,34 @@ const MyProfile = () => {
                         </div>
 
 
-
+                        {/* Row Cards */}
                         <div className="pt-4">
-                            {
-                                [1, 2, 3, 4, 5].map((data, i) => {
-                                    return <div key={i}> hello world</div>
-                                })
-                            }
+                            <div className="row">
+                                <div className="col">
+                                    <div className="card rounded-5 mb-4 shadow">
+                                        <div className="card-body px-4 pt-4 d-flex justify-content-center align-items-center flex-column">
+                                            <h1 className="text-secondary fw-bold">0</h1>
+                                            <p className="text-wrap text-center" style={{ maxWidth: "100px" }}>Companies Applied</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="card rounded-5 mb-4 shadow">
+                                        <div className="card-body px-4 pt-4 d-flex justify-content-center align-items-center flex-column">
+                                            <h1 className="text-info fw-bold">0</h1>
+                                            <p className="text-wrap text-center" style={{ maxWidth: "100px" }}>Ongoing Application</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="card rounded-5 mb-4 shadow">
+                                        <div className="card-body px-4 pt-4 d-flex justify-content-center align-items-center flex-column">
+                                            <h1 className="text-danger fw-bold">0</h1>
+                                            <p className="text-wrap text-center" style={{ maxWidth: "100px" }}>Declined Application</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 

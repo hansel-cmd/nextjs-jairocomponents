@@ -10,7 +10,7 @@
 }
   
 .upload-image-inner-container:hover {
-    background-color: #f8f9fa;
+    background-color: rgb(228, 228, 228);
     cursor: pointer !important;
 }
 
