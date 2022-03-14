@@ -1,8 +1,24 @@
 import styles from '../styles/Navbar.module.css'
+import NotificationContainer from './NotificationContainer'
 import Link from 'next/link'
-import router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
+
 
 const Navbar = () => {
+
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+    // change isLoggedIn value inside local storage 
+    // to view navbar for a user who's not logged in
+    useEffect(() => {
+        (() => {
+            // important: localStorage.getItem() returns a string
+            setIsLoggedIn(localStorage.getItem("isLoggedIn"))
+        })()
+    }, [])
+
+    const signOut = () => localStorage.setItem('isLoggedIn', false)
 
     const router = useRouter()
     let links = [
@@ -46,6 +62,7 @@ const Navbar = () => {
                             links.map((link, ndx) => {
 
                                 if (ndx == 0) return null
+                                if (ndx == 3 && isLoggedIn == "true") return null
 
                                 return (
                                     <li key={ndx} className={
@@ -64,10 +81,65 @@ const Navbar = () => {
 
                     <div className={styles['navbar-pipe']}>
                     </div>
-                    <div className={`d-grid ${styles['btn-container']}`}>
-                        <Link href="/sign-in">
-                            <button className="btn btn-outline-info px-6 rounded-4" type="submit">Sign In</button>
-                        </Link>
+
+                    <div className="d-flex align-items-center justify-content-between flex-lg-row flex-row-reverse">
+
+                        {/* Messages and Notifications button : when logged in */}
+
+                        <div className={`align-items-center justify-content-center ${styles['btn-container']}`} style={{ display: isLoggedIn == "true" ? "flex" : "none" }}>
+                            
+                            {/* Message Icon */}
+                            <div className="dropdown dropstart">
+                                <span className="h3 text-info ps-2 pe-3 mb-0" role="button" data-bs-toggle="dropdown"><i className="bi bi-envelope"></i></span>
+
+                                <div className="dropdown-menu py-0" style={{border: "none"}}>
+                                    <div>
+                                        <NotificationContainer info={{title: "Messages"}}></NotificationContainer>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Notif Icon */}
+                            <div className="dropdown dropstart">
+                                <span className="h3 text-info ps-2 pe-3 mb-0" role="button" data-bs-toggle="dropdown"><i className="bi bi-bell-fill"></i></span>
+
+                                <div className="dropdown-menu py-0" style={{border: "none"}}>
+                                    <div>
+                                        <NotificationContainer info={{title: "Notifications"}}></NotificationContainer>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className={`d-grid ${styles['btn-container']}`}>
+
+                            {/* Sign In Button : when not logged in */}
+                            <Link href="/sign-in">
+                                <button className="btn btn-outline-info px-6 rounded-4" type="submit" style={{ display: isLoggedIn == "true" ? "none" : "block" }}>Sign In</button>
+                            </Link>
+
+                            {/* My Account Button : when logged in */}
+                            <div className="dropdown" style={{ display: isLoggedIn == "true" ? "block" : "none" }}>
+                                <button className="btn btn-outline-info px-4 rounded-4 dropdown-toggle" type="button" id="my_account" data-bs-toggle="dropdown" aria-expanded="false">
+                                    My Account
+                                </button>
+                                <ul className="dropdown-menu" aria-labelledby="my_account">
+                                    <li>
+                                        <Link href="/my-profile">
+                                            <a className="dropdown-item">My Profile</a>
+                                        </Link>
+                                    </li>
+                                    <li><a className="dropdown-item">My Dashboard</a></li>
+                                    <li><a className="dropdown-item">Settings</a></li>
+                                    <li>
+                                        <Link href="/sign-in">
+                                            <a className="dropdown-item" onClick={signOut}>Logout</a>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

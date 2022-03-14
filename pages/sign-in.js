@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 const SignIn = () => {
 
@@ -10,6 +10,8 @@ const SignIn = () => {
         'backgroundOrigin': 'initial',
         'boxSizing': 'border-box'
     }
+
+    const signIn = () => localStorage.setItem('isLoggedIn', true)
 
     return (
         <div style={bg_property} className="vh-100 py-5 py-lg-0 pt-lg-5">
@@ -61,8 +63,8 @@ const SignIn = () => {
                                 {/* sign in button */}
                                 <div className="row mb-4">
                                     <div className="col d-grid d-block">
-                                        <Link href={`/view-company-jobs/[indicate_company_name]`}>
-                                            <button type="button" className="btn btn-secondary">Sign In</button>
+                                        <Link href={`/my-profile`}>
+                                            <button type="button" className="btn btn-secondary" onClick={signIn}>Sign In</button>
                                         </Link>
                                     </div>
                                 </div>

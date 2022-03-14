@@ -23,8 +23,8 @@ const FollowModal = () => {
 
                                 <div className="pb-3">
                                     <ol>
-                                        <li className="fw-bold" style={{ "padding-left": "0rem" }}>Job Posts</li>
-                                        <li className="fw-bold" style={{ "padding-left": "0rem" }}>Company Information updates</li>
+                                        <li className="fw-bold" style={{ "paddingLeft": "0rem" }}>Job Posts</li>
+                                        <li className="fw-bold" style={{ "paddingLeft": "0rem" }}>Company Information updates</li>
                                     </ol>
                                 </div>
 

@@ -83,6 +83,10 @@
   text-align: justify !important;
 }
 
+.custom-opacity {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
 .custom-width {
   width: 100% !important;
 }
@@ -7374,6 +7378,10 @@ textarea.form-control-lg {
 
 .fs-6 {
   font-size: 1rem !important;
+}
+
+.fs-7 {
+  font-size: 0.875rem !important;
 }
 
 .fst-italic {
