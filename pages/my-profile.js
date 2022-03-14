@@ -15,10 +15,10 @@ const MyProfile = () => {
             <ExpectedSalaryModal></ExpectedSalaryModal>
             <PersonalInformationModal></PersonalInformationModal>
 
-            <div className="container px-0">
+            <div className="container px-0 pt-5 pt-lg-0">
                 <div className="row">
 
-                    <div className='col-lg-8 p-4'>
+                    <div className='col-lg-8 px-4 pt-4 pb-0 pb-sm-4'>
 
                         {/* Profile Card */}
                         <div className="card rounded-5 border-highlight-left mb-4 shadow">
@@ -36,9 +36,9 @@ const MyProfile = () => {
                                             <div className="col-4 col-sm-3 d-flex justify-content-center">
                                                 <div className="position-relative">
                                                     <img src="/velvet.png" className="border p-1 border-info rounded-circle bg-none p-0" height="120" width="120" style={{ minHeight: "100px", minWidth: "100px" }} />
-                                                    <div class={`${styles['upload-image-inner-container']}`}>
-                                                        <input class={styles['inputfile']} type="file" name="pic" accept="image/*" style={{ cursor: "pointer" }} />
-                                                        <label><i class="bi bi-camera-fill text-info" height="30" width="30"></i></label>
+                                                    <div className={`${styles['upload-image-inner-container']}`}>
+                                                        <input className={styles['inputfile']} type="file" name="pic" accept="image/*" style={{ cursor: "pointer" }} />
+                                                        <label><i className="bi bi-camera-fill text-info" height="30" width="30"></i></label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -115,10 +115,62 @@ const MyProfile = () => {
 
                         </div>
 
+                        {/* Calendar */}
+                        <div className="pt-4 card rounded-5 mb-4 shadow">
+                            <div className="row">
+                                <div className="col">
+                                    Calendar Container
+                                </div>
+                            </div>
+                        </div>
 
+                        {/* Application History Container */}
+                        <div className="card rounded-5 mb-4 shadow border border-info">
+                            
+                            <div className="card-body px-4">
+
+                                <div className="card" style={{ border: "none" }}>
+                                    {/* Application History Header */}
+                                    <div className="card-header bg-transparent pt-4 px-4 pb-2">
+                                        <div className="row">
+                                            <div className="col-6 col-sm-6">
+                                                <h3 className="text-secondary fw-bold">Application History</h3>
+                                            </div>
+                                            <div className="col-6 col-sm-6 d-flex justify-content-end align-items-start">
+                                                <a className="btn fw-bold" role="button">
+                                                    View All
+                                                    <span className="ps-3">
+                                                        <i className="bi bi-arrows-angle-expand"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* History List */}
+                                    <div className="card-body px-4 d-flex flex-column align-items-center justify-content-center">
+                                        <div className="px-4 py-4 my-4">
+                                            <p className="mb-0 text-center">You haven't applied to any Jobs yet.</p>
+                                            <p className="mb-0 text-center">
+                                                Start searching
+                                                <span className="text-info">
+                                                    <Link href="/listing">
+                                                        <a className="text-decoration-none"> one </a>
+                                                    </Link>
+                                                </span>
+                                                here.</p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="col-lg-4 p-4">
+                    <div className="col-lg-4 px-4 pt-0 pt-sm-4 pb-4">
                         {/* Right Floating Item */}
                         <div>
                             <div className={`${styles['position-fixed']} ${styles['position-fixed-container']}`}>
@@ -222,21 +274,8 @@ const MyProfile = () => {
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
-
-
-
-
                     </div>
-
-
-
-
-
-
                 </div>
             </div>
         </section>
