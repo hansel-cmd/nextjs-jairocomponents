@@ -3,11 +3,9 @@ const PersonalInformationModal = () => {
         <div className="modal fade" id="personal_information_modal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalLabel" aria-hidden="true">
             <div className="modal-dialog modal-lg">
                 <div className="modal-content">
-
                     <div className="modal-header no-border-bottom justify-content-center py-4">
                         <h3 className="modal-title text-center fw-bold" id="modalLabel">Personal Information</h3>
                     </div>
-
 
                     <div className="modal-body pt-4">
 
