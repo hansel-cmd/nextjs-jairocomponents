@@ -80,7 +80,7 @@ const ApplyModal = () => {
                                 <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                             </div>
                             <div className="col d-grid d-block">
-                                <button type="button" className="btn btn-info">Apply</button>
+                                <button type="button" className="btn btn-primary">Apply</button>
 
                             </div>
                         </div>

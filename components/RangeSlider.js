@@ -14,7 +14,7 @@ export default function RangeSlider() {
   };
 
   return (
-    <Box sx={{ width: 300 }}>
+    <Box sx={{ width: "100%" }}>
       <Slider
         getAriaLabel={() => 'Salary range'}
         value={value}

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from '../styles/Listing.module.css'
 import LongCard from '../components/LongCard'
-import FilterModal from '../components/FilterModal'
 import CardDetails from '../components/CardDetails'
 import ApplyModal from '../components/ApplyModal'
 import RangeSlider from '../components/RangeSlider'
@@ -24,18 +23,19 @@ const Listing = () => {
         router.push(`/view-job/${company}/${job}`)
     }
     return (
-        <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
+        <section className="text-dark px-lg-0 p-lg-0 pt-lg-5 pb-lg-4">
 
             {/* banner */}
-            <section className="container">
+            <section className="container py-4 mt-4">
 
-                <h1 className="text-center">Find your dream job</h1>
+                <h1 className="text-center py-4">Find your dream job</h1>
 
-                <div className="row">
+                {/* Filter, Search, SortBy */}
+                <div className="row pb-4">
 
                     {/* Filter Button */}
                     <div className="col-lg-3 col-xl-2 d-grid d-block mt-2">
-                        <button type="button" className="btn btn-info shadow-sm" data-bs-toggle="modal" data-bs-target="#modal">Filter <i className="bi bi-funnel-fill"></i></button>
+                        <button type="button" className="btn btn-primary shadow-sm">Filter <i className="bi bi-funnel-fill"></i></button>
                     </div>
 
                     <div className="col mt-2">
@@ -49,7 +49,7 @@ const Listing = () => {
                     </div>
 
                     <div className="col-lg-3 col-xl-2 mt-2">
-                        <select id="sortBy" className="form-select shadow-sm" role="button" aria-label="sort-by">
+                        <select id="latest" className="form-select shadow-sm" role="button" aria-label="latest">
                             <option defaultValue>Default Value</option>
                             <option value="x">Lorem, ipsum dolor.</option>
                             <option value="y">Lorem, ipsum.</option>
@@ -58,8 +58,9 @@ const Listing = () => {
                     </div>
                 </div>
 
-                <div className="row">
-                    <div className="col">
+                {/* Industry, Employment, Salary, Clear Filter */}
+                <div className="row pb-4">
+                    <div className="col-6 col-sm-6 col-xl-4">
                         <div className="py-2">
                             <span className="no-background text-start fw-bold">
                                 Industry
@@ -73,7 +74,7 @@ const Listing = () => {
                             </select>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col-6 col-sm-6 col-xl-3">
                         <div className="py-2">
                             <span className="no-background text-start fw-bold">
                                 Employment Type
@@ -87,7 +88,7 @@ const Listing = () => {
                             </select>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col-12 col-sm-6 col-xl-3">
                         <div className="py-2">
                             <div className="d-flex justify-content-between pb-2">
                                 <span className="no-background text-start fw-bold">
@@ -97,68 +98,34 @@ const Listing = () => {
                                     P18,500 - P20,000
                                 </span>
                             </div>
-                            <RangeSlider></RangeSlider>
+                            <div className="d-flex justify-content-center">
+                                <RangeSlider></RangeSlider>
+                            </div>
                         </div>
                     </div>
-                    <div className="col d-flex align-items-end">
+                    <div className="col-12 col-sm-6 col-xl-2 d-flex align-items-end">
                         <div className="py-2">
-                            <button type="button" className="btn btn-info shadow-sm">Clear Filter</button>
+                            <button type="button" className="btn btn-secondary shadow-sm">Clear Filter</button>
                         </div>
                     </div>
                 </div>
-
-
 
             </section>
 
             {/* job list */}
             <section className="container px-0 position-relative pt-4">
                 <div className="row">
-                    <div className="col-5">
+                    <div className="col-12 col-md-6 col-lg-6 col-xl-5">
                         <div className="pt-4">
                             {jobs.map((data, i) => <LongCard key={i} details={data} setJob={() => { setCurrJob(data) }} ></LongCard>)}
                         </div>
                     </div>
-                    <div className="col-1"></div>
-                    <div className="col-6 pt-4">
+                    <div className="col-1 col-xl-1 d-none d-xl-block"></div>
+                    <div className="col-6 pt-4 col-md-6 col-lg-6 d-none d-md-block">
                         <CardDetails details={currJob}></CardDetails>
                     </div>
                 </div>
-
             </section>
-
-            <FilterModal></FilterModal>
-
-            <div className="container px-0">
-
-                <div className="row">
-                    {/* list */}
-                    <div className='col-lg-7 p-4'>
-
-
-
-                        <div className={styles['horizontal-separator']}></div>
-
-
-
-
-
-                    </div>
-
-                    {/* card */}
-                    {/* <div className="col-lg-5 p-4">
-                        <div style={{ width: '35%' }}>
-                            <div style={{ width: 'inherit' }}>
-                                <div className="position-fixed" style={{ width: 'inherit', maxWidth: '510px' }}>
-                                    <CardDetails details={currJob}></CardDetails>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
-
-
-                </div>
-            </div>
 
 
             {/* Apply Now Modal */}
