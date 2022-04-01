@@ -4,7 +4,7 @@ const CardDetails = ({ details }) => {
     const router = useRouter()
     return (
         <>
-            <div className="card rounded-5 mb-4 shadow bg-outline-secondary-opacity-10">
+            <div className="card rounded-5 mb-4 shadow bg-outline-secondary-opacity-10" style={{position: "sticky", top: "120px"}}>
 
                 <div className="card-header no-border-bottom bg-transparent pt-4 pb-0 px-4">
                     <div className="row align-items-center">
@@ -27,7 +27,7 @@ const CardDetails = ({ details }) => {
                         </div>
                         <div className="col-10 col-sm-4">
                             <p className="fs-7 text-dark text-end" style={{ backgroundColor: "1px solid black !important" }}>
-                                <i class="bi bi-share px-1 rounded" role="button" style={{ border: "1px solid #C4C4C4", color: "#C4C4C4" }}></i>
+                                <i className="bi bi-share px-1 rounded" role="button" style={{ border: "1px solid #C4C4C4", color: "#C4C4C4" }}></i>
                             </p>
                             <p className="fs-7 text-dark text-end">Applicants: 9</p>
                         </div>
