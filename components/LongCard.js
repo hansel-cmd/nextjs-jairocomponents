@@ -28,7 +28,7 @@ const LongCard = ({ details, setJob }) => {
                 <hr />
                 <div className="row align-items-center">
                     <div className="col">
-                        <button type="button" className="btn btn-info px-4 rounded" data-bs-toggle="modal" data-bs-target="#apply_now_modal">Apply</button>
+                        <button type="button" className="btn btn-primary px-4 rounded" data-bs-toggle="modal" data-bs-target="#apply_now_modal">Apply</button>
                     </div>
                     <div className="col-6">
                         <p className="fs-7 text-secondary text-end mb-0">9 replies</p>

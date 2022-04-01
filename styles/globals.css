@@ -33,13 +33,26 @@
 .bg-outline-secondary-opacity-5 {
   background: rgba(250, 112, 134, 0.05) !important;
   color: var(--bs-secondary) !important;
-  border: 1.5px solid var(--bs-secondary) !important;
 }
 
 .bg-outline-info-opacity-5 {
   background: rgba(115, 206, 156, 0.05) !important;
   color: var(--bs-info) !important;
-  border: 1.5px solid var(--bs-info) !important;
+}
+
+.bg-outline-primary-opacity-10 {
+  background: rgba(108, 75, 216, 0.10) !important;
+  color: var(--bs-primary) !important;
+}
+
+.bg-outline-secondary-opacity-10 {
+  background: rgba(250, 112, 134, 0.10) !important;
+  color: var(--bs-secondary) !important;
+}
+
+.bg-outline-info-opacity-10 {
+  background: rgba(115, 206, 156, 0.10) !important;
+  color: var(--bs-info) !important;
 }
 
 .primary-hover:hover {
