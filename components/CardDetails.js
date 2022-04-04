@@ -33,8 +33,9 @@ const CardDetails = ({ details }) => {
                         </div>
                     </div>
                 </div>
+                
                 <div className="card-body px-4">
-                    {/* icons with label */}
+                    
                     <div className="row pb-4 px-2">
                         <div className="col-4 bg-primary ps-3 p-3" style={{ borderTopLeftRadius: "1rem", borderBottomLeftRadius: "1rem" }}>
                             <p className="text-white mb-0">Type</p>

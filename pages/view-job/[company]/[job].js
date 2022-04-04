@@ -30,8 +30,10 @@ const JobPage = () => {
                         </div>
                     </div>
                 </div>
+
                 <div className="card-body px-4">
-                    {/* icons with label */}
+
+                    {/* 3 Column Card */}
                     <div className="row pb-4 px-2 mb-4">
                         <div className="col-4 bg-primary px-4 p-3" style={{ borderTopLeftRadius: "1rem", borderBottomLeftRadius: "1rem" }}>
                             <p className="text-white mb-0">Type</p>
@@ -50,7 +52,7 @@ const JobPage = () => {
                     {/* Position Description */}
                     <div className="pb-3 pt-4 mt-5">
                         <h6 className="text-primary fw-bold text-uppercase">Position Description:</h6>
-                        <p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinctio...</p>
+                        <p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinction. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, eligendi!</p>
                     </div>
 
                     {/* Job Responsibilities */}
