@@ -13,6 +13,8 @@ const Listing = () => {
     // STATES //
     const [jobs, setJobs] = useState([])
     const [currJob, setCurrJob] = useState({})
+    const [isFilterActive, setFilterActive] = useState(false)
+    const toggleClass = () => setFilterActive(!isFilterActive)
 
     useEffect(() => {
         setJobs(jobDesc)
@@ -35,7 +37,7 @@ const Listing = () => {
 
                     {/* Filter Button */}
                     <div className="col-lg-3 col-xl-2 d-grid d-block mt-2">
-                        <button type="button" className="btn btn-primary shadow-sm">Filter <i className="bi bi-funnel-fill"></i></button>
+                        <button type="button" className="btn btn-primary shadow-sm" onClick={toggleClass}>Filter <i className="bi bi-funnel-fill"></i></button>
                     </div>
 
                     {/* Search Box */}
@@ -62,7 +64,7 @@ const Listing = () => {
 
                 {/* Filter Options: Industry, Employment, Salary, Clear Filter */}
                 {/* Toggle the class: [invisible, visible] when clicking the filter button from above. */}
-                <div className="row py-4 visible">
+                <div className="row py-4" style={{ visibility: !isFilterActive ? 'hidden' : 'visible' }}>
                     
                     {/* Industry */}
                     <div className="col-6 col-sm-6 col-xl-4">
