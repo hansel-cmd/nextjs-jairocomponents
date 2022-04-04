@@ -6,8 +6,21 @@ const JobPage = () => {
     const [isFormActive, setFormActive] = useState(false)
     const toggleClass = () => setFormActive(!isFormActive)
 
+    const [isSubmitDone, setSubmitDone] = useState(false)
+    const toggleSubmission = () => setSubmitDone(!isSubmitDone)
+
 
     return (
+        <>
+        
+        {/* Notification for application submission */}
+        <div className="bg-info text-white" style={{display: isSubmitDone ? "block" : "none", position: "sticky", top: "90px", zIndex: 100}}>
+                <p className="py-3 fs-5 text-center">
+                    Thank you for your application
+                </p>
+        </div>
+
+        
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5 mt-5">
 
             <div className="container px-0 pt-5 pt-lg-0">
@@ -70,7 +83,7 @@ const JobPage = () => {
                                     </div>
                                     <div className="card-body px-5 pt-0">
 
-                                        <form className="row g-3">
+                                        <div className="row g-3">
                                             <div>
                                                 <label htmlFor="first_name" className="form-label">First Name</label>
                                                 <input type="text" className="form-control bg-transparent border border-primary" id="first_name" placeholder="Enter your first name..." />
@@ -109,10 +122,10 @@ const JobPage = () => {
                                             {/* Form: Apply Button */}
                                             <div className="row py-4">
                                                 <div className="col">
-                                                    <button className="btn btn-primary px-5 py-2">Apply</button>
+                                                    <button className="btn btn-primary px-5 py-2" onClick={toggleSubmission}>Apply</button>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -193,7 +206,8 @@ const JobPage = () => {
                                 </div>
 
                                 {/* Apply Now, View Company Button */}
-                                <div className="row mb-4 gx-4 mt-5">
+                                {/* Remove this when apply now is clicked */}
+                                <div className="row mb-4 gx-4 mt-5" style={{display: !isFormActive ? 'block' : 'none' }}>
                                     <div className="col">
                                         <button type="button" className="btn btn-primary px-4 py-2 me-4" onClick={toggleClass}>Apply Now</button>
                                         <button type="button" className="btn btn-primary px-4 py-2">View Company</button>
@@ -205,6 +219,7 @@ const JobPage = () => {
 
             </div>
         </section>
+        </>
     );
 }
 
