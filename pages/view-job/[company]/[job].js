@@ -1,4 +1,12 @@
+import { useEffect, useState } from 'react'
+import styles from '../../../styles/ApplyModal.module.css'
+
 const JobPage = () => {
+
+    const [isFormActive, setFormActive] = useState(false)
+    const toggleClass = () => setFormActive(!isFormActive)
+
+
     return (
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5 mt-5">
 
@@ -49,83 +57,150 @@ const JobPage = () => {
                         </div>
                     </div>
 
-                    {/* Position Description */}
-                    <div className="pb-3 pt-4 mt-5">
-                        <h6 className="text-primary fw-bold text-uppercase">Position Description:</h6>
-                        <p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinction. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, eligendi!</p>
-                    </div>
 
-                    {/* Job Responsibilities */}
-                    <div className="pb-3 pt-4">
-                        <h6 className="text-primary fw-bold text-uppercase">Job Responsibilities:</h6>
-                        <ul className="text-dark list-unstyled">
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deserunt, laboriosam labore odit maiores atque?
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos asperiores repudiandae commodi fuga! Distinctio nemo iure iusto nihil unde sunt.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere impedit, aut harum, architecto vero qui soluta, placeat odio ut nihil quisquam repellendus recusandae.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptas ipsa velit dolor aliquam quo cum quae minima!
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis et cupiditate nihil dignissimos repellat!
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dicta placeat.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, debitis quod quam amet accusamus temporibus!
-                            </li>
-                        </ul>
-                    </div>
+                        <div className="row">
 
-                    {/* Qualifications */}
-                    <div className="pb-3 pt-4">
-                        <h6 className="text-primary fw-bold text-uppercase">Qualifications:</h6>
-                        <ul className="text-dark list-unstyled">
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptas ipsa velit dolor aliquam quo cum quae minima!
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere impedit, aut harum, architecto vero qui soluta, placeat odio ut nihil quisquam repellendus recusandae.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            </li>
-                        </ul>
-                    </div>
+                            {/* Apply Now Form */}
+                            <div className="col-lg-6 col-xl-4 pe-4" style={{display: !isFormActive ? 'none' : 'block' }}>
+                                <div className="card rounded-5 bg-outline-primary-opacity-5 text-dark">
+                                    <div className="card-header no-border-bottom bg-transparent pt-4 pb-2 my-4">
+                                        <h3 className="fw-bold text-center">
+                                            You are Applying for Product Designer
+                                        </h3>
+                                    </div>
+                                    <div className="card-body px-5 pt-0">
 
-                    <div className="row mb-4 gx-4 mt-5">
-                        <div className="col">
-                            <button type="button" className="btn btn-primary px-4 py-2 me-4">Apply Now</button>
-                            <button type="button" className="btn btn-primary px-4 py-2">View Company</button>
+                                        <form className="row g-3">
+                                            <div>
+                                                <label htmlFor="first_name" className="form-label">First Name</label>
+                                                <input type="text" className="form-control bg-transparent border border-primary" id="first_name" placeholder="Enter your first name..." />
+                                            </div>
+
+                                            {/* Last Name */}
+                                            <div>
+                                                <label htmlFor="last_name" className="form-label">Last Name</label>
+                                                <input type="text" className="form-control bg-transparent border border-primary" id="last_name" placeholder="Enter your last name..." />
+                                            </div>
+
+
+                                            {/* Email Address */}
+                                            <div>
+                                                <label htmlFor="email" className="form-label">Email Address</label>
+                                                <input type="email" className="form-control bg-transparent border border-primary" id="email" placeholder="Enter your email address..." />
+                                            </div>
+
+                                            {/* Phone Number */}
+                                            <div>
+                                                <label htmlFor="phone_number" className="form-label">Phone Number</label>
+                                                <input type="text" className="form-control bg-transparent border border-primary" id="phone_number" placeholder="Enter your phone number..." />
+                                            </div>
+
+
+                                            {/* Resume*/}
+                                            <div>
+                                                <label htmlFor="resume" className="form-label">Resume</label>
+                                                <div className="input-group mb-3">
+                                                    <input type="file" className={`form-control bg-transparent border border-primary ${styles['resume']}`} id="resume" placeholder="Upload Resume..."/>
+                                                    <label className="input-group-text border border-primary" htmlFor="resume" style={{ cursor: 'pointer' }}><i className="bi bi-cloud-upload"></i></label>
+                                                </div>
+
+                                            </div>
+
+                                            {/* Form: Apply Button */}
+                                            <div className="row py-4">
+                                                <div className="col">
+                                                    <button className="btn btn-primary px-5 py-2">Apply</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {/* Job Details */}
+                            <div className={ !isFormActive ? 'col-lg-6 col-xl-12' : 'col-lg-6 col-xl-8' }>
+
+                                {/* Position Description */}
+                                <div className="pb-3 pt-4 mt-5">
+                                    <h6 className="text-primary fw-bold text-uppercase">Position Description:</h6>
+                                    <p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinction. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, eligendi!</p>
+                                </div>
+
+                                {/* Job Responsibilities */}
+                                <div className="pb-3 pt-4">
+                                    <h6 className="text-primary fw-bold text-uppercase">Job Responsibilities:</h6>
+                                    <ul className="text-dark list-unstyled">
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deserunt, laboriosam labore odit maiores atque?
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos asperiores repudiandae commodi fuga! Distinctio nemo iure iusto nihil unde sunt.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere impedit, aut harum, architecto vero qui soluta, placeat odio ut nihil quisquam repellendus recusandae.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptas ipsa velit dolor aliquam quo cum quae minima!
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis et cupiditate nihil dignissimos repellat!
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, dicta placeat.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, debitis quod quam amet accusamus temporibus!
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Qualifications */}
+                                <div className="pb-3 pt-4">
+                                    <h6 className="text-primary fw-bold text-uppercase">Qualifications:</h6>
+                                    <ul className="text-dark list-unstyled">
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptas ipsa velit dolor aliquam quo cum quae minima!
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere impedit, aut harum, architecto vero qui soluta, placeat odio ut nihil quisquam repellendus recusandae.
+                                        </li>
+                                        <li>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nam laborum. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                {/* Apply Now, View Company Button */}
+                                <div className="row mb-4 gx-4 mt-5">
+                                    <div className="col">
+                                        <button type="button" className="btn btn-primary px-4 py-2 me-4" onClick={toggleClass}>Apply Now</button>
+                                        <button type="button" className="btn btn-primary px-4 py-2">View Company</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
                 </div>
 
             </div>

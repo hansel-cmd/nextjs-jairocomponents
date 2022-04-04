@@ -64,7 +64,7 @@ const Listing = () => {
 
                 {/* Filter Options: Industry, Employment, Salary, Clear Filter */}
                 {/* Toggle the class: [invisible, visible] when clicking the filter button from above. */}
-                <div className="row py-4" style={{ visibility: !isFilterActive ? 'hidden' : 'visible' }}>
+                <div className={`row py-4 ${ !isFilterActive ? 'invisible' : 'visible'} `} >
                     
                     {/* Industry */}
                     <div className="col-6 col-sm-6 col-xl-4">
