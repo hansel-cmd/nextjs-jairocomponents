@@ -28,7 +28,7 @@ const Listing = () => {
             {/* banner */}
             <section className="container py-4 mt-4">
 
-                <h1 className="text-center py-4">Find your dream job</h1>
+                <h1 className="text-center py-4 fw-bold">Find your dream job</h1>
 
                 {/* Filter, Search, SortBy */}
                 <div className="row pb-4">
@@ -38,6 +38,7 @@ const Listing = () => {
                         <button type="button" className="btn btn-primary shadow-sm">Filter <i className="bi bi-funnel-fill"></i></button>
                     </div>
 
+                    {/* Search Box */}
                     <div className="col mt-2">
                         <div className="input-group flex-nowrap">
                             <input type="text" placeholder="Search jobs here..." className="form-control shadow-sm no-border-right' no-focus" />
@@ -48,6 +49,7 @@ const Listing = () => {
                         </div>
                     </div>
 
+                    {/* Sort By */}
                     <div className="col-lg-3 col-xl-2 mt-2">
                         <select id="latest" className="form-select shadow-sm" role="button" aria-label="latest">
                             <option defaultValue>Default Value</option>
@@ -58,8 +60,11 @@ const Listing = () => {
                     </div>
                 </div>
 
-                {/* Industry, Employment, Salary, Clear Filter */}
-                <div className="row pb-4">
+                {/* Filter Options: Industry, Employment, Salary, Clear Filter */}
+                {/* Toggle the class: [invisible, visible] when clicking the filter button from above. */}
+                <div className="row py-4 visible">
+                    
+                    {/* Industry */}
                     <div className="col-6 col-sm-6 col-xl-4">
                         <div className="py-2">
                             <span className="no-background text-start fw-bold">
@@ -74,6 +79,8 @@ const Listing = () => {
                             </select>
                         </div>
                     </div>
+
+                    {/* Employment Type */}
                     <div className="col-6 col-sm-6 col-xl-3">
                         <div className="py-2">
                             <span className="no-background text-start fw-bold">
@@ -88,6 +95,8 @@ const Listing = () => {
                             </select>
                         </div>
                     </div>
+
+                    {/* Salary Range Selector */}
                     <div className="col-12 col-sm-6 col-xl-3">
                         <div className="py-2">
                             <div className="d-flex justify-content-between pb-2">
@@ -103,6 +112,8 @@ const Listing = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Clear Filter */}
                     <div className="col-12 col-sm-6 col-xl-2 d-flex align-items-end">
                         <div className="py-2">
                             <button type="button" className="btn btn-secondary shadow-sm">Clear Filter</button>
@@ -116,8 +127,36 @@ const Listing = () => {
             <section className="container px-0 position-relative pt-4">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-6 col-xl-5">
-                        <div className="pt-4">
+                        <div className="py-4">
                             {jobs.map((data, i) => <LongCard key={i} details={data} setJob={() => { setCurrJob(data) }} ></LongCard>)}
+                        </div>
+
+                        {/* Pagination */}
+                        {/* Pagination */}
+                        <div className="row pt-4">
+                            <nav className="d-flex justify-content-center">
+                                <ul className="pagination">
+                                    <li className="page-item disabled text-primary me-2">
+                                        <a className="page-link">
+                                            <i className="bi bi-caret-left-fill"></i>
+                                        </a>
+                                    </li>
+                                    <li className="page-item me-2">
+                                        <a className="page-link">1</a>
+                                    </li>
+                                    <li className="page-item active me-2" aria-current="page">
+                                        <a className="page-link">2</a>
+                                    </li>
+                                    <li className="page-item me-2">
+                                        <a className="page-link">3</a>
+                                    </li>
+                                    <li className="page-item me-2">
+                                        <a className="page-link text-primary">
+                                            <i className="bi bi-caret-right-fill"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                     <div className="col-1 col-xl-1 d-none d-xl-block"></div>
@@ -125,6 +164,7 @@ const Listing = () => {
                         <CardDetails details={currJob}></CardDetails>
                     </div>
                 </div>
+
             </section>
 
 
