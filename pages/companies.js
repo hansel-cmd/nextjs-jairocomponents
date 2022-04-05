@@ -10,7 +10,7 @@ const Companies = () => {
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5">
 
             {/* banner */}
-            <section className="container py-4 mt-4">
+            <section className="container py-4 mt-4 pb-0">
 
                 {/* Filter, Search, SortBy */}
                 <div className="row pb-4">
@@ -92,10 +92,15 @@ const Companies = () => {
 
             <div className="container px-0 pt-0 pt-lg-0 position-relative">
 
-                <div className="row">
+                <div className="row flex-row-reverse">
+
+                    {/* Company Card Details */}
+                    <div className="col-lg-6 col-xl-7 p-4">
+                        <CompanyCardDetails></CompanyCardDetails>
+                    </div>
 
                     {/* company list */}
-                    <div className="col-12 col-md-6 col-lg-6 col-xl-5">
+                    <div className="col-lg-6 col-xl-5">
                         <div className="py-4">
                             {[1, 2, 3, 4, 5].map((data, i) => {
                                 return (
@@ -148,11 +153,6 @@ const Companies = () => {
                                 </ul>
                             </nav>
                         </div>
-                    </div>
-
-                    {/* Company Card Details */}
-                    <div className="col-lg-7 p-4">
-                        <CompanyCardDetails></CompanyCardDetails>
                     </div>
                 </div>
             </div>

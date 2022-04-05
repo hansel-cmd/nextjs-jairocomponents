@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const CompanyCardDetails = () => {
     return (
-        <div className="card rounded-5 mb-4 bg-outline-secondary-opacity-10" style={{ position: "sticky", top: "120px" }}>
+        <div className="card rounded-5 mb-4 bg-outline-secondary-opacity-10 border-0 px-2" style={{ position: "sticky", top: "120px" }}>
 
             <div className="card-header no-border-bottom bg-transparent pt-4 pb-0 px-4">
                 <div className="row align-items-center">
@@ -27,15 +27,17 @@ const CompanyCardDetails = () => {
 
             <div className="card-body px-4">
 
-                {/* Description */}
-                <div className="pb-3">
-                    <p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinction. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, numquam dolores!</p>
-                    <p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinction. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, numquam dolores!</p>
-                </div>
-
                 <div className="row">
-                    <h6 className="text-dark fw-bold pb-4">Available Job Positions</h6>
-                    <div className="col pe-0">
+                    {/* Description */}
+                    <div className="pb-3">
+                        <p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinction. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, numquam dolores!</p>
+                        <p className="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius tempore ad debitis ipsa impedit omnis aliquam id. Architecto voluptate quidem, perferendis minus sint illum illo, dolor, harum voluptas veniam ratione totam exercitationem. Quos, nam. Iste ipsum velit voluptas distinction. Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, numquam dolores!</p>
+                    </div>
+                </div>
+                
+                <h6 className="text-dark fw-bold pb-4">Available Job Positions</h6>
+                <div className="row px-2">
+                    <div className="col px-1">
                         <div className="card rounded-5 mb-4">
                             <div className="card-header no-border-bottom bg-transparent pt-3 pb-0">
                                 <div className="row">
@@ -55,7 +57,7 @@ const CompanyCardDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col pe-0">
+                    <div className="col px-1">
                         <div className="card rounded-5 mb-4">
                             <div className="card-header no-border-bottom bg-transparent pt-3 pb-0">
                                 <div className="row">
@@ -75,7 +77,7 @@ const CompanyCardDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col pe-0">
+                    <div className="col px-1">
                         <div className="card rounded-5 mb-4">
                             <div className="card-header no-border-bottom bg-transparent pt-3 pb-0">
                                 <div className="row">
@@ -95,7 +97,6 @@ const CompanyCardDetails = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
