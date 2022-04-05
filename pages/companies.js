@@ -105,7 +105,7 @@ const Companies = () => {
                             {[1, 2, 3, 4, 5].map((data, i) => {
                                 return (
                                     <div key={i} className="card rounded-5 bg-outline-primary-opacity-5 primary-hover mb-4 border-0" role="button">
-                                        <div className="card-header no-border-bottom bg-transparent pt-4 px-4 pb-4">
+                                        <div className="card-header no-border-bottom bg-transparent pt-4 px-4 pb-2">
                                             <div className="row">
                                                 <div className="col-12 d-flex align-items-center justify-content-between">
                                                     <h5 className="text-dark fw-bold">
@@ -126,7 +126,6 @@ const Companies = () => {
                             })}
                         </div>
 
-                        {/* Pagination */}
                         {/* Pagination */}
                         <div className="row pt-4">
                             <nav className="d-flex justify-content-center">
