@@ -92,7 +92,7 @@ const Companies = () => {
 
             <div className="container px-0 pt-0 pt-lg-0 position-relative">
 
-                <div className="row flex-row-reverse">
+                <div className="row flex-row-reverse pb-4">
 
                     {/* Company Card Details */}
                     <div className="col-lg-6 col-xl-7 p-4">

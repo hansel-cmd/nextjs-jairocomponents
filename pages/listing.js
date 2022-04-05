@@ -64,8 +64,8 @@ const Listing = () => {
 
                 {/* Filter Options: Industry, Employment, Salary, Clear Filter */}
                 {/* Toggle the class: [invisible, visible] when clicking the filter button from above. */}
-                <div className={`row py-4 ${ !isFilterActive ? 'invisible' : 'visible'} `} >
-                    
+                <div className={`row py-4 ${!isFilterActive ? 'invisible' : 'visible'} `} >
+
                     {/* Industry */}
                     <div className="col-6 col-sm-6 col-xl-4">
                         <div className="py-2">
@@ -127,13 +127,18 @@ const Listing = () => {
 
             {/* job list */}
             <section className="container px-0 position-relative pt-0 pt-md-4">
-                <div className="row">
+                <div className="row flex-row-reverse">
+                    <div className="pt-4 col-md-6 col-lg-6">
+                        <CardDetails details={currJob}></CardDetails>
+                    </div>
+
+                    <div className="col-1 col-xl-1 d-none d-xl-block"></div>
+
                     <div className="col-12 col-md-6 col-lg-6 col-xl-5">
                         <div className="py-4">
                             {jobs.map((data, i) => <LongCard key={i} details={data} setJob={() => { setCurrJob(data) }} ></LongCard>)}
                         </div>
 
-                        {/* Pagination */}
                         {/* Pagination */}
                         <div className="row pt-4">
                             <nav className="d-flex justify-content-center">
@@ -160,10 +165,6 @@ const Listing = () => {
                                 </ul>
                             </nav>
                         </div>
-                    </div>
-                    <div className="col-1 col-xl-1 d-none d-xl-block"></div>
-                    <div className="col-6 pt-4 col-md-6 col-lg-6 d-none d-md-block">
-                        <CardDetails details={currJob}></CardDetails>
                     </div>
                 </div>
 

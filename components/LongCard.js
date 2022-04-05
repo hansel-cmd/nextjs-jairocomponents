@@ -1,6 +1,6 @@
 const LongCard = ({ details, setJob }) => {
     return (
-        <div className="card rounded-5 bg-outline-primary-opacity-5 primary-hover mb-4 shadow" role="button" onClick={setJob}>
+        <div className="card rounded-5 bg-outline-primary-opacity-5 primary-hover mb-4 border-0" role="button" onClick={setJob}>
             <div className="card-header no-border-bottom bg-transparent pt-4 px-4 pb-0">
                 <div className="row">
                     <div className="col-12 d-flex align-items-center justify-content-between">

@@ -4,7 +4,7 @@ const CardDetails = ({ details }) => {
     const router = useRouter()
     return (
         <>
-            <div className="card rounded-5 mb-4 shadow bg-outline-secondary-opacity-10" style={{position: "sticky", top: "120px"}}>
+            <div className="card rounded-5 mb-4 bg-outline-secondary-opacity-10 border-0" style={{position: "sticky", top: "120px"}}>
 
                 <div className="card-header no-border-bottom bg-transparent pt-4 pb-0 px-4">
                     <div className="row align-items-center">
