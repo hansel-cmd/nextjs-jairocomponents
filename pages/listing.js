@@ -28,7 +28,7 @@ const Listing = () => {
         <section className="text-dark px-lg-0 p-lg-0 pt-lg-5 pb-lg-4">
 
             {/* banner */}
-            <section className="container py-4 mt-4">
+            <section className="container py-4 mt-4 pb-0 pb-lg-4">
 
                 <h1 className="text-center py-4 fw-bold">Find your dream job</h1>
 
@@ -126,7 +126,7 @@ const Listing = () => {
             </section>
 
             {/* job list */}
-            <section className="container px-0 position-relative pt-4">
+            <section className="container px-0 position-relative pt-0 pt-md-4">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-6 col-xl-5">
                         <div className="py-4">
