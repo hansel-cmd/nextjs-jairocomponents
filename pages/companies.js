@@ -12,18 +12,18 @@ const Companies = () => {
             {/* banner */}
             <section className="container py-4 mt-4 pb-0">
 
-                {/* Filter, Search, SortBy */}
+                {/* Filter, Search, Frequency */}
                 <div className="row pb-4">
 
                     {/* Filter Button */}
                     <div className="col-lg-3 col-xl-2 d-grid d-block mt-2">
-                        <button type="button" className="btn btn-primary shadow-sm" onClick={toggleClass}>Filter <i className="bi bi-funnel-fill"></i></button>
+                        <button type="button" className="btn btn-primary" onClick={toggleClass}>Filter <i className="bi bi-funnel-fill"></i></button>
                     </div>
 
                     {/* Search Box */}
                     <div className="col mt-2">
                         <div className="input-group flex-nowrap">
-                            <input type="text" placeholder="Search companies here..." className="form-control shadow-sm no-border-right' no-focus" />
+                            <input type="text" placeholder="Search companies here..." className="form-control no-border-right' no-focus" />
 
                             <span className="input-group-text no-background" id="addon-wrapping">
                                 <i className="bi bi-search"></i>
@@ -33,7 +33,7 @@ const Companies = () => {
 
                     {/* Frequency: Most Search, etc. */}
                     <div className="col-lg-3 col-xl-2 mt-2">
-                        <select id="frequency" className="form-select shadow-sm" role="button" aria-label="latest">
+                        <select id="frequency" className="form-select" role="button" aria-label="latest">
                             <option defaultValue>Default Value</option>
                             <option value="x">Lorem, ipsum dolor.</option>
                             <option value="y">Lorem, ipsum.</option>
@@ -53,7 +53,7 @@ const Companies = () => {
                                 Industry
                             </span>
 
-                            <select id="industry" className="form-select mt-2 shadow-sm" role="button" aria-label="industry">
+                            <select id="industry" className="form-select mt-2" role="button" aria-label="industry">
                                 <option defaultValue>Default</option>
                                 <option value="x">Lorem, ipsum dolor.</option>
                                 <option value="y">Lorem, ipsum.</option>
@@ -69,7 +69,7 @@ const Companies = () => {
                                 Location
                             </span>
 
-                            <select id="location" className="form-select mt-2 shadow-sm" role="button" aria-label="location">
+                            <select id="location" className="form-select mt-2" role="button" aria-label="location">
                                 <option defaultValue>Default</option>
                                 <option value="x">Lorem, ipsum dolor.</option>
                                 <option value="y">Lorem, ipsum.</option>
@@ -82,7 +82,7 @@ const Companies = () => {
                     {/* Clear Filter */}
                     <div className="col-12 col-sm-6 col-xl-2 d-flex align-items-end">
                         <div className="py-2">
-                            <button type="button" className="btn btn-secondary shadow-sm">Clear Filter</button>
+                            <button type="button" className="btn btn-secondary">Clear Filter</button>
                         </div>
                     </div>
                 </div>

@@ -37,13 +37,13 @@ const Listing = () => {
 
                     {/* Filter Button */}
                     <div className="col-lg-3 col-xl-2 d-grid d-block mt-2">
-                        <button type="button" className="btn btn-primary shadow-sm" onClick={toggleClass}>Filter <i className="bi bi-funnel-fill"></i></button>
+                        <button type="button" className="btn btn-primary" onClick={toggleClass}>Filter <i className="bi bi-funnel-fill"></i></button>
                     </div>
 
                     {/* Search Box */}
                     <div className="col mt-2">
                         <div className="input-group flex-nowrap">
-                            <input type="text" placeholder="Search jobs here..." className="form-control shadow-sm no-border-right' no-focus" />
+                            <input type="text" placeholder="Search jobs here..." className="form-control no-border-right' no-focus" />
 
                             <span className="input-group-text no-background" id="addon-wrapping">
                                 <i className="bi bi-search"></i>
@@ -53,7 +53,7 @@ const Listing = () => {
 
                     {/* Sort By */}
                     <div className="col-lg-3 col-xl-2 mt-2">
-                        <select id="latest" className="form-select shadow-sm" role="button" aria-label="latest">
+                        <select id="latest" className="form-select" role="button" aria-label="latest">
                             <option defaultValue>Default Value</option>
                             <option value="x">Lorem, ipsum dolor.</option>
                             <option value="y">Lorem, ipsum.</option>
@@ -73,7 +73,7 @@ const Listing = () => {
                                 Industry
                             </span>
 
-                            <select id="industry" className="form-select mt-2 shadow-sm" role="button" aria-label="industry">
+                            <select id="industry" className="form-select mt-2" role="button" aria-label="industry">
                                 <option defaultValue>Default</option>
                                 <option value="x">Lorem, ipsum dolor.</option>
                                 <option value="y">Lorem, ipsum.</option>
@@ -89,7 +89,7 @@ const Listing = () => {
                                 Employment Type
                             </span>
 
-                            <select id="employment_type" className="form-select mt-2 shadow-sm" role="button" aria-label="employment_type">
+                            <select id="employment_type" className="form-select mt-2" role="button" aria-label="employment_type">
                                 <option defaultValue>Default</option>
                                 <option value="x">Lorem, ipsum dolor.</option>
                                 <option value="y">Lorem, ipsum.</option>
@@ -118,7 +118,7 @@ const Listing = () => {
                     {/* Clear Filter */}
                     <div className="col-12 col-sm-6 col-xl-2 d-flex align-items-end">
                         <div className="py-2">
-                            <button type="button" className="btn btn-secondary shadow-sm">Clear Filter</button>
+                            <button type="button" className="btn btn-secondary">Clear Filter</button>
                         </div>
                     </div>
                 </div>
