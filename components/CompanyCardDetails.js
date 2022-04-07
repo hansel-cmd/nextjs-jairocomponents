@@ -20,7 +20,9 @@ const CompanyCardDetails = () => {
                         </h5>
                     </div>
                     <div className="col-2 col-sm-4 d-flex justify-content-end align-items-start">
-                        <button type="button" className="btn btn-primary rounded-4 py-2 px-3">View More</button>
+                        <Link href={'/view-company-jobs/company.js'}>
+                            <button type="button" className="btn btn-primary rounded-4 py-2 px-3">View More</button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -36,9 +38,9 @@ const CompanyCardDetails = () => {
                     </div>
 
                 </div>
-                
+
                 <h6 className="text-dark fw-bold pb-4">Available Job Positions</h6>
-                
+
                 {/* Positions */}
                 <div className="row px-2">
 
