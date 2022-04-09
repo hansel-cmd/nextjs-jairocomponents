@@ -3,8 +3,76 @@
 
 /* Change root colors if u want to change theme, i.e, bs-primary */
 
+
+/*  */
+.bg-outline-primary-opacity-20 {
+  background: rgba(108, 75, 216, 0.2) !important;
+  color: var(--bs-primary) !important;
+  border: 1.5px solid var(--bs-primary) !important;
+}
+
+.bg-outline-secondary-opacity-20 {
+  background: rgba(250, 112, 134, 0.2) !important;
+  color: var(--bs-secondary) !important;
+  border: 1.5px solid var(--bs-secondary) !important;
+}
+
+.bg-outline-info-opacity-20 {
+  background: rgba(115, 206, 156, 0.20) !important;
+  color: var(--bs-info) !important;
+  border: 1.5px solid var(--bs-info) !important;
+}
+
+/* usually the cards */
+
+.bg-outline-primary-opacity-5 {
+  background: rgba(108, 75, 216, 0.05) !important;
+  color: var(--bs-primary) !important;
+}
+
+.bg-outline-secondary-opacity-5 {
+  background: rgba(250, 112, 134, 0.05) !important;
+  color: var(--bs-secondary) !important;
+}
+
+.bg-outline-info-opacity-5 {
+  background: rgba(115, 206, 156, 0.05) !important;
+  color: var(--bs-info) !important;
+}
+
+.bg-outline-primary-opacity-10 {
+  background: rgba(108, 75, 216, 0.10) !important;
+  color: var(--bs-primary) !important;
+}
+
+.bg-outline-secondary-opacity-10 {
+  background: rgba(250, 112, 134, 0.10) !important;
+  color: var(--bs-secondary) !important;
+}
+
+.bg-outline-info-opacity-10 {
+  background: rgba(115, 206, 156, 0.10) !important;
+  color: var(--bs-info) !important;
+}
+
+.primary-hover:hover {
+  background: rgba(108, 75, 216, 0.20) !important;
+  outline: 1.5px solid var(--bs-primary) !important;
+}
+
+.secondary-hover:hover {
+  background: rgba(108, 75, 216, 0.20) !important;
+  outline: 2px solid var(--bs-secondary) !important;
+}
+
+.info-hover:hover {
+  background: rgba(115, 206, 156, 0.20) !important;
+  outline: 2px solid var(--bs-info) !important;
+}
+
 /* I added another custom utilities */
 /* Custom Utilities */
+
 
 .px-5 {
   padding-right: 2rem !important;
@@ -160,10 +228,10 @@
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
-  --bs-primary: #0d6efd;
-  --bs-secondary: #6c757d;
+  --bs-primary: #6D4CD8;
+  --bs-secondary: #FA7086;
   --bs-success: #198754;
-  --bs-info: #0dcaf0;
+  --bs-info: #73CE9C;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
@@ -3083,8 +3151,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 .btn-primary:hover {
   color: #fff;
@@ -3103,34 +3171,34 @@ textarea.form-control-lg {
   border-color: #0a53be;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+  box-shadow: 0 0 0 0.25rem #3184fd80;
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5c636a;
-  border-color: #565e64;
+  background-color: var(--bs-danger);
+  border-color: var(--bs-danger);
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #fff;
-  background-color: #5c636a;
-  border-color: #565e64;
-  box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+  background-color:  var(--bs-danger);
+  border-color:  var(--bs-danger);
+  box-shadow: 0 0 0 0.25rem var(--bs-danger);
 }
 .btn-check:checked + .btn-secondary, .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active, .show > .btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #565e64;
-  border-color: #51585e;
+  background-color: var(--bs-danger);
+  border-color: var(--bs-danger);
 }
 .btn-check:checked + .btn-secondary:focus, .btn-check:active + .btn-secondary:focus, .btn-secondary:active:focus, .btn-secondary.active:focus, .show > .btn-secondary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
@@ -3173,8 +3241,8 @@ textarea.form-control-lg {
 
 .btn-info {
   color: #fff;
-  background-color: #0dcaf0;
-  border-color: #0dcaf0;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 .btn-info:hover {
   color: #fff;
@@ -4707,7 +4775,7 @@ textarea.form-control-lg {
 .page-link:focus {
   z-index: 3;
   color: #0a58ca;
-  background-color: #e9ecef;
+  background-color: var(--bs-primary);
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
@@ -4718,8 +4786,8 @@ textarea.form-control-lg {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 .page-item.disabled .page-link {
   color: #6c757d;
@@ -6647,11 +6715,11 @@ textarea.form-control-lg {
 }
 
 .border-primary {
-  border-color: #0d6efd !important;
+  border-color: var(--bs-primary) !important;
 }
 
 .border-secondary {
-  border-color: #6c757d !important;
+  border-color: var(--bs-secondary) !important;
 }
 
 .border-success {
@@ -6659,7 +6727,7 @@ textarea.form-control-lg {
 }
 
 .border-info {
-  border-color: #0dcaf0 !important;
+  border-color: var(--bs-info) !important;
 }
 
 .border-warning {
@@ -7480,7 +7548,7 @@ textarea.form-control-lg {
 
 /* rtl:end:remove */
 .text-primary {
-  color: #0d6efd !important;
+  color: #6D4CD8 !important;
 }
 
 .text-secondary {
@@ -7492,7 +7560,7 @@ textarea.form-control-lg {
 }
 
 .text-info {
-  color: #0dcaf0 !important;
+  color: #6D4CD8 !important;
 }
 
 .text-warning {
@@ -7536,11 +7604,11 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-  background-color: #0d6efd !important;
+  background-color: var(--bs-primary) !important;
 }
 
 .bg-secondary {
-  background-color: #6c757d !important;
+  background-color: var(--bs-secondary) !important;
 }
 
 .bg-success {
@@ -7548,7 +7616,7 @@ textarea.form-control-lg {
 }
 
 .bg-info {
-  background-color: #0dcaf0 !important;
+  background-color: var(--bs-info) !important;
 }
 
 .bg-warning {
@@ -10978,3 +11046,4 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
